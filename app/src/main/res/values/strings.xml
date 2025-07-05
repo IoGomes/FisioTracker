@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FisioTracker4.0</string>
+    <string name="email">Email:</string>
+    <string name="senha">Senha:</string>
+</resources>
