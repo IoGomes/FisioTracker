@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Not registered yet? SignUp"
-            android:fontFamily="@font/thin2"
+            android:fontFamily="@font/m_plus_rounded1c_regular"
             android:textColor="@color/cardview_dark_background"
             android:paddingTop="16dp"
             android:paddingBottom="12dp"/>
@@ -83,7 +83,7 @@
                         android:layout_height="50dp"
                         android:background="@drawable/shape_text_field"
                         android:hint="@string/email"
-                        android:fontFamily="@font/thin2"
+                        android:fontFamily="@font/m_plus_rounded1c_regular"
                         android:paddingStart="16dp"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
@@ -117,7 +117,7 @@
                         android:autofillHints=""
                         android:background="@drawable/shape_text_field"
                         android:hint="@string/senha"
-                        android:fontFamily="@font/thin2"
+                        android:fontFamily="@font/m_plus_rounded1c_regular"
                         android:inputType="textPassword"
                         android:paddingStart="16dp"
                         android:paddingEnd="50dp"
@@ -155,7 +155,7 @@
                     android:checked="false"
                     android:layout_marginEnd="12dp"
                     android:text="Permanecer conectado"
-                    android:fontFamily="@font/thin2"
+                    android:fontFamily="@font/m_plus_rounded1c_regular"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -163,7 +163,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Esqueceu a senha?"
-                    android:fontFamily="@font/thin2"
+                    android:fontFamily="@font/m_plus_rounded1c_regular"
                     android:textColor="@color/white"
                     android:layout_gravity="center"/>
             </LinearLayout>
@@ -180,7 +180,7 @@
                     android:elevation="2dp"
                     android:focusable="true"
                     android:text="Login"
-                    android:fontFamily="@font/thin2"
+                    android:fontFamily="@font/m_plus_rounded1c_regular"
                     android:textColor="@color/white"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -205,7 +205,7 @@
                         android:layout_margin="6dp"
                         android:gravity="center_horizontal"
                         android:text="or login with"
-                        android:fontFamily="@font/thin2"
+                        android:fontFamily="@font/m_plus_rounded1c_regular"
 
                         android:textColor="#606060">
                     </TextView>
