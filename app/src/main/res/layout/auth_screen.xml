@@ -18,7 +18,8 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Not Registered yet? SignUp"
+            android:text="Not registered yet? SignUp"
+            android:fontFamily="@font/thin2"
             android:textColor="@color/cardview_dark_background"
             android:paddingTop="16dp"
             android:paddingBottom="12dp"/>
@@ -52,20 +53,20 @@
             android:layout_height="match_parent"
             android:background="@drawable/shape_rounded_corner_rectangle"
             android:gravity="center"
+            android:clipToOutline="true"
             android:paddingStart="12dp"
             android:paddingEnd="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="276dp"
-                    android:layout_marginBottom="18dp"
-                    android:background="@drawable/teste"
+                    android:layout_height="281dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_logo"
                     android:gravity="center"
                     android:paddingBottom="70dp"
                     android:textColor="@color/white"
@@ -79,21 +80,22 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="54dp"
+                        android:layout_height="50dp"
                         android:background="@drawable/shape_text_field"
                         android:hint="@string/email"
+                        android:fontFamily="@font/thin2"
                         android:paddingStart="16dp"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
                         android:paddingEnd="52dp"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:elevation="4dp"
+                        android:elevation="2dp"
                         tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
                     <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:background="@drawable/ic_email"
                         android:layout_gravity="center|end"
                         android:layout_margin="16dp"
@@ -111,23 +113,24 @@
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="54dp"
+                        android:layout_height="52dp"
                         android:autofillHints=""
                         android:background="@drawable/shape_text_field"
                         android:hint="@string/senha"
+                        android:fontFamily="@font/thin2"
                         android:inputType="textPassword"
                         android:paddingStart="16dp"
-                        android:paddingEnd="52dp"
+                        android:paddingEnd="50dp"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         tools:ignore="RtlSymmetry"
-                        android:elevation="4dp"/>
+                        android:elevation="2dp"/>
 
                     <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:background="@drawable/ic_password"
                         android:layout_gravity="center|end"
                         android:layout_margin="16dp"
@@ -144,14 +147,15 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp">
-                <CheckBox
+                <RadioButton
                     android:id="@+id/checkBoxExample"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:checked="false"
                     android:layout_marginEnd="12dp"
-                    android:text="Permanecer Conectado"
+                    android:text="Permanecer conectado"
+                    android:fontFamily="@font/thin2"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -159,6 +163,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Esqueceu a senha?"
+                    android:fontFamily="@font/thin2"
                     android:textColor="@color/white"
                     android:layout_gravity="center"/>
             </LinearLayout>
@@ -168,20 +173,20 @@
                     android:id="@+id/login"
 
                     android:layout_width="match_parent"
-                    android:layout_height="54dp"
+                    android:layout_height="52dp"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/bg_gradient_button"
                     android:clickable="true"
-                    android:elevation="40dp"
+                    android:elevation="2dp"
                     android:focusable="true"
                     android:text="Login"
-                    android:fontFamily="monospace"
+                    android:fontFamily="@font/thin2"
                     android:textColor="@color/white"
                     android:textSize="30sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="300dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="15dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="12dp">
@@ -199,7 +204,9 @@
                         android:layout_gravity="center"
                         android:layout_margin="6dp"
                         android:gravity="center_horizontal"
-                        android:text="Or login with"
+                        android:text="or login with"
+                        android:fontFamily="@font/thin2"
+
                         android:textColor="#606060">
                     </TextView>
 
@@ -222,12 +229,14 @@
                     <ImageView
                         android:layout_width="42dp"
                         android:layout_height="42dp"
+                        android:elevation="2dp"
                         android:layout_marginEnd="30dp"
                         android:background="@drawable/ic_google_auth" />
 
                     <ImageView
                         android:layout_width="42dp"
                         android:layout_height="42dp"
+                        android:elevation="2dp"
                         android:background="@drawable/ic_github" />
 
                 </LinearLayout>
