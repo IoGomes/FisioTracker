@@ -33,7 +33,7 @@
         android:layout_height="284dp"
         android:contentDescription="Imagem de topo"
         android:scaleType="centerCrop"
-        android:src="@drawable/teste3" />
+        android:src="@drawable/img_company" />
 
 
     <LinearLayout

@@ -127,7 +127,7 @@
                     android:elevation="2sp"
                     android:orientation="vertical">
 
-                    <com.example.fisiotracker.FisioTracker_Services.PacientGraphView
+                    <com.example.fisiotracker.fisio_tracker_services.PacientGraphView
                         android:id="@+id/chartView"
                         android:layout_width="match_parent"
                         android:layout_height="232dp"
@@ -180,7 +180,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="8dp">
 
-                        <com.example.fisiotracker.FisioTracker_Services.GradientTubeSpeedometer
+                        <com.example.fisiotracker.fisio_tracker_services.GradientTubeSpeedometer
                             android:id="@+id/speedView"
                             android:layout_width="334sp"
                             android:layout_height="match_parent"
@@ -250,5 +250,5 @@
         app:headerLayout="@layout/nav_header"
         app:itemTextColor="@color/white"
         app:itemIconTint="@color/white"
-        android:background="@drawable/shape_nav_banner"/>
+        android:background="@drawable/shape_inferior_nav_banner"/>
 </androidx.drawerlayout.widget.DrawerLayout>

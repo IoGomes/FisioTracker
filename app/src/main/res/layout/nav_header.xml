@@ -6,7 +6,7 @@
         android:id="@+id/banner_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/shape_banner" />
+        android:src="@drawable/shape_superior_nav_banner" />
 
     <ImageView
         android:id="@+id/profile_image"
