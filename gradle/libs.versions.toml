@@ -1,15 +1,18 @@
 [versions]
-agp = "8.9.2"
+agp = "8.11.1"
 anychartAndroid = "1.1.2"
 blurview = "version-2.0.6"
 blurviewVersion = "1.6.6"
-firebaseBom = "33.15.0"
+dotlottieAndroid = "0.8.0"
+dotlottieAndroidVersion = "0.0.3"
+firebaseBom = "33.16.0"
 fkBlurViewAndroid = "1.0.1"
 glassmorphismview = "1.0.3"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-appcompat = "1.7.0"
+appcompat = "1.7.1"
+lottie = "6.1.0"
 material = "1.12.0"
 rendereffectblur = "1.0.0"
 speedviewlib = "1.6.1"
@@ -17,6 +20,8 @@ speedviewlib = "1.6.1"
 [libraries]
 anychart-android = { module = "com.anychart:anychart-android", version.ref = "anychartAndroid" }
 blurview = { module = "com.github.Dimezis:BlurView", version.ref = "blurview" }
+dotlottie-android = { module = "com.github.LottieFiles:dotlottie-android", version.ref = "dotlottieAndroid" }
+dotlottie-android-v003 = { module = "com.github.LottieFiles:dotlottie-android", version.ref = "dotlottieAndroidVersion" }
 eightbitlab-blurview = { module = "com.eightbitlab:blurview", version.ref = "blurviewVersion" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
@@ -26,6 +31,7 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 rendereffectblur = { module = "com.eightbitlab:rendereffectblur", version.ref = "rendereffectblur" }
 speedviewlib = { module = "com.github.anastr:speedviewlib", version.ref = "speedviewlib" }

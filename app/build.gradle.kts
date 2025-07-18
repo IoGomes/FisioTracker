@@ -42,5 +42,6 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation (libs.blurview)
     implementation (libs.speedviewlib)
+    implementation(libs.lottie)
 }
 

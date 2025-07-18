@@ -2,12 +2,17 @@ package com.example.fisiotracker.FisioTracker_Activities;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fisiotracker.R;
@@ -21,6 +26,12 @@ public class AuthenticationScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.auth_screen);
+
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(Html.fromHtml("<u>Not registered yet? SignUp</u>"));
+
+        TextView textView2 = findViewById(R.id.textView2);
+        textView2.setText(Html.fromHtml("<u>Esqueceu a senha?</u>"));
 
         Window window = getWindow();
         window.getDecorView().setSystemUiVisibility(
@@ -38,7 +49,7 @@ public class AuthenticationScreenActivity extends AppCompatActivity {
 
         blurView.setupWith(rootView)
                 .setFrameClearDrawable(windowBackground)
-                .setBlurRadius(20f);
+                .setBlurRadius(12f);
 
         Button loginButton = findViewById(R.id.login);
         loginButton.setOnClickListener(v -> {
