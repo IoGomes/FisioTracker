@@ -233,8 +233,8 @@
                     android:gravity="center">
                     <Button
                         style="?android:attr/buttonBarButtonStyle"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:background="@drawable/ic_google"
                         android:layout_margin="4dp" />
                     <Space
@@ -242,8 +242,8 @@
                         android:layout_height="wrap_content" />
                     <Button
                         style="?android:attr/buttonBarButtonStyle"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:layout_margin="4dp"
                         android:background="@drawable/ic_github" />
                 </LinearLayout>
