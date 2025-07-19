@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FisioTracker4.0</string>
+    <string name="app_name">FisioTracker</string>
     <string name="email">Email:</string>
     <string name="senha">Senha:</string>
     <string name="or_login_with">or login with</string>
@@ -10,4 +10,5 @@
     <string name="login">Login</string>
     <string name="signup">Signup!</string>
     <string name="fisioterapeuta_auxiliando_paciente">Fisioterapeuta auxiliando paciente</string>
+    <string name="default_web_client_id">744179331678-jc3atm79br7jaibkj0on55vlqai8ketk.apps.googleusercontent.com</string>
 </resources>
