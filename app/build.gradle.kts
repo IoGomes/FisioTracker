@@ -43,5 +43,10 @@ dependencies {
     implementation (libs.blurview)
     implementation (libs.speedviewlib)
     implementation(libs.lottie)
+    implementation(libs.credentials)
+    implementation(libs.credentials.v122)
+    implementation(libs.credentials.play.services.auth.v122)
+    implementation(libs.firebase.auth)
+    implementation(libs.play.services.auth)
 }
 
