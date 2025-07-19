@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_01_splash);
 
         Window window = getWindow();
         window.getDecorView().setSystemUiVisibility(
@@ -31,7 +31,7 @@ public class SplashActivity extends AppCompatActivity {
         }
 
         LottieAnimationView animationView = findViewById(R.id.animation_view);
-        animationView.setAnimation(R.raw.heartbeat_lottie_animation);
+        animationView.setAnimation(R.raw.lottie_heartbeat);
         animationView.setSpeed(3f);
         animationView.playAnimation();
 

@@ -5,7 +5,9 @@
     <string name="or_login_with">or login with</string>
     <string name="permanecer_conectado">Permanecer conectado</string>
     <string name="esqueceu_a_senha">Esqueceu a senha?</string>
-    <string name="not_registered_yet_signup">Not registered yet? SignUp</string>
+    <string name="not_registered_yet">Not registered yet?</string>
     <string name="imagem_de_topo">Imagem de topo</string>
     <string name="login">Login</string>
+    <string name="signup">Signup!</string>
+    <string name="fisioterapeuta_auxiliando_paciente">Fisioterapeuta auxiliando paciente</string>
 </resources>

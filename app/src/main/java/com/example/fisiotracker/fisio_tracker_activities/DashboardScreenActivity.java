@@ -92,7 +92,7 @@ public class DashboardScreenActivity extends AppCompatActivity {
         }
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dashboard_screen);
+        setContentView(R.layout.activity_04_dashboard);
 
         Window window = getWindow();
         window.getDecorView().setSystemUiVisibility(
@@ -161,7 +161,7 @@ public class DashboardScreenActivity extends AppCompatActivity {
         };
 
         LayoutInflater inflater = getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+        View dialogView = inflater.inflate(R.layout.dialog_02_daco, null);
 
         ListView listView = dialogView.findViewById(R.id.dialog_list);
         ImageView menuIcon = dialogView.findViewById(R.id.menu_icon);
@@ -247,7 +247,7 @@ public class DashboardScreenActivity extends AppCompatActivity {
 
         bluetoothAdapter.startDiscovery();
 
-        View dialogView = getLayoutInflater().inflate(R.layout.ble_devices_dialog, null);
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_01_ble_devices, null);
         ListView listView = dialogView.findViewById(R.id.dialog_list);
         ImageView closeIcon = dialogView.findViewById(R.id.close_icon);
 

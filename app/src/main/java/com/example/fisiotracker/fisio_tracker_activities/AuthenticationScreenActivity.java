@@ -23,10 +23,10 @@ public class AuthenticationScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.auth_screen);
+        setContentView(R.layout.activity_02_auth);
 
-        TextView textView = findViewById(R.id.textView);
-        textView.setText(Html.fromHtml("<u>Not registered yet? SignUp</u>"));
+        TextView textView = findViewById(R.id.signup);
+        textView.setText(Html.fromHtml("<u>SignUp!</u>"));
 
         TextView textView2 = findViewById(R.id.textView2);
         textView2.setText(Html.fromHtml("<u>Esqueceu a senha?</u>"));
