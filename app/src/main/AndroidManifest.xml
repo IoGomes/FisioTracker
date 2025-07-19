@@ -20,7 +20,7 @@
         android:theme="@style/YourThemeName">
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.SplashActivity"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_01_splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,11 +30,11 @@
 
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.AuthenticationScreenActivity"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_02_auth"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.DashboardScreenActivity"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_04_dashboard"
             android:exported="false" />
 
     </application>
