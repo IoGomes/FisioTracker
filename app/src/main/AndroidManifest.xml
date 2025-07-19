@@ -34,9 +34,24 @@
             android:exported="false" />
 
         <activity
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_03_register"
+            android:exported="false" />
+
+        <activity
             android:name="com.example.fisiotracker.fisio_tracker_activities.activity_04_dashboard"
             android:exported="false" />
 
+        <activity
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_05_profile"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_06_subscription"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_07_data_export"
+            android:exported="false" />
     </application>
 
 </manifest>

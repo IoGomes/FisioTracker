@@ -1,4 +1,6 @@
 package com.example.fisiotracker.fisio_tracker_activities;
 
-public class activity_05_profile {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class activity_05_profile extends AppCompatActivity {
 }
