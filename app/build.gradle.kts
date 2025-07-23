@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.fisiotracker"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.fisiotracker"
@@ -15,6 +15,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    android {
+        buildFeatures {
+            viewBinding = true
+        }
     }
 
     buildTypes {
