@@ -49,7 +49,7 @@ import android.bluetooth.le.ScanSettings;
 
 import eightbitlab.com.blurview.BlurView;
 
-public class activity_03_dashboard extends AppCompatActivity {
+public class activity_02_dashboard extends AppCompatActivity {
 
     private static final int REQUEST_BLUETOOTH_CONNECT = 1001;
     private BlurView blurView;
@@ -351,7 +351,7 @@ public class activity_03_dashboard extends AppCompatActivity {
             BluetoothDevice device = result.getDevice();
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                if (ActivityCompat.checkSelfPermission(activity_03_dashboard.this,
+                if (ActivityCompat.checkSelfPermission(activity_02_dashboard.this,
                         Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
                     return;
                 }
@@ -378,7 +378,7 @@ public class activity_03_dashboard extends AppCompatActivity {
         public void onScanFailed(int errorCode) {
             Log.e("BLE", "Scan failed with error code: " + errorCode);
             runOnUiThread(() -> {
-                Toast.makeText(activity_03_dashboard.this,
+                Toast.makeText(activity_02_dashboard.this,
                         "Falha no scan BLE: " + errorCode, Toast.LENGTH_SHORT).show();
             });
         }
@@ -429,10 +429,10 @@ public class activity_03_dashboard extends AppCompatActivity {
             super.onConnectionStateChange(gatt, status, newState);
 
             if (newState == BluetoothProfile.STATE_CONNECTED) {
-                runOnUiThread(() -> Toast.makeText(activity_03_dashboard.this, "Conectado ao dispositivo BLE", Toast.LENGTH_SHORT).show());
+                runOnUiThread(() -> Toast.makeText(activity_02_dashboard.this, "Conectado ao dispositivo BLE", Toast.LENGTH_SHORT).show());
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                    if (ActivityCompat.checkSelfPermission(activity_03_dashboard.this,
+                    if (ActivityCompat.checkSelfPermission(activity_02_dashboard.this,
                             Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) {
                         gatt.discoverServices();
                     }
@@ -440,7 +440,7 @@ public class activity_03_dashboard extends AppCompatActivity {
                     gatt.discoverServices();
                 }
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
-                runOnUiThread(() -> Toast.makeText(activity_03_dashboard.this, "Desconectado do dispositivo BLE", Toast.LENGTH_SHORT).show());
+                runOnUiThread(() -> Toast.makeText(activity_02_dashboard.this, "Desconectado do dispositivo BLE", Toast.LENGTH_SHORT).show());
                 uartRxCharacteristic = null;
             }
         }
@@ -453,7 +453,7 @@ public class activity_03_dashboard extends AppCompatActivity {
             }
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                if (ActivityCompat.checkSelfPermission(activity_03_dashboard.this,
+                if (ActivityCompat.checkSelfPermission(activity_02_dashboard.this,
                         Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
                     return;
                 }

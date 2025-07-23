@@ -1,18 +1,14 @@
 package com.example.fisiotracker.fisio_tracker_activities;
 
-import android.annotation.SuppressLint;
-import android.os.Handler;
 import android.view.Display;
 import android.view.WindowManager;
 import android.os.Build;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
@@ -198,7 +194,7 @@ public class activity_01_auth extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(activity_01_auth.this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(activity_01_auth.this, activity_03_dashboard.class);
+                            Intent intent = new Intent(activity_01_auth.this, activity_02_dashboard.class);
                             startActivity(intent);
                             finish();
 
