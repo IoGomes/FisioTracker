@@ -66,23 +66,19 @@
         </activity>
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_02_register"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_02_dashboard"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_03_dashboard"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_03_profile"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_04_profile"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_04_subscription"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_05_subscription"
-            android:exported="false" />
-
-        <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_06_data_export"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_05_data_export"
             android:exported="false" />
     </application>
 
