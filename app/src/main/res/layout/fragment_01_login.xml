@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fisio_tracker_activities.fragment_01_login">
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/glass"
+        android:layout_width="match_parent"
+        android:layout_height="642dp"
+        android:background="@drawable/shape_rounded_corner_rectangle"
+        android:clipToOutline="true"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="308dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:src="@drawable/img_company"
+                android:textColor="@color/white"
+                android:textSize="85sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="26dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/shape_text_field"
+                    android:fontFamily="@font/m_plus_rounded1c_regular"
+                    android:hint="@string/email"
+                    android:paddingStart="16dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,RtlSymmetry,TextFields" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center|end"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/ic_mail"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:autofillHints=""
+                    android:background="@drawable/shape_text_field"
+                    android:fontFamily="@font/m_plus_rounded1c_regular"
+                    android:hint="@string/senha"
+                    android:inputType="textPassword"
+                    android:paddingStart="16dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center|end"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/ic_pass"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <RadioButton
+                    android:id="@+id/checkBoxExample"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:fontFamily="@font/m_plus_rounded1c_regular"
+                    android:text="@string/permanecer_conectado"
+                    android:textColor="#707070" />
+
+                <Space
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/m_plus_rounded1c_regular"
+                    android:text="@string/esqueceu_a_senha"
+                    android:textColor="#707070" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="42dp"
+                app:cardElevation="0dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/rounded_frame"
+                    android:elevation="2dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottie_login_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/lottie_01_button_animated_gradient" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottie_loading_circle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:lottie_rawRes="@raw/lottie_02_loading_circle"
+                        android:visibility="invisible"
+                        app:lottie_loop="true"
+                        app:lottie_autoPlay="true"/>
+
+                    <Button
+                        android:id="@+id/login"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/m_plus_rounded1c_regular"
+                        android:stateListAnimator="@animator/scale_animation"
+                        android:text="@string/login"
+                        android:textAllCaps="false"
+                        android:visibility="visible"
+                        android:textColor="@color/white"
+                        android:textSize="32sp" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp">
+
+                <View
+                    android:layout_width="102dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_auth_screen_separate_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="6dp"
+                    android:fontFamily="@font/m_plus_rounded1c_regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/or_login_with"
+                    android:textColor="#707070" />
+
+                <View
+                    android:layout_width="102dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_auth_screen_separate_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/google"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/android_dark_rd_na" />
+
+                <Space
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/github_mark_white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </eightbitlab.com.blurview.BlurView>
+</FrameLayout>
