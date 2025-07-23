@@ -4,12 +4,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,19 +15,15 @@ import com.example.fisiotracker.R;
 
 import eightbitlab.com.blurview.BlurView;
 
-public class activity_02_auth extends AppCompatActivity {
+public class activity_02_register extends AppCompatActivity {
+
     BlurView blurView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_02_auth);
-
-        TextView textView = findViewById(R.id.signup);
-        textView.setText(Html.fromHtml("<u>SignUp!</u>"));
-
-        TextView textView2 = findViewById(R.id.textView2);
-        textView2.setText(Html.fromHtml("<u>Esqueceu a senha?</u>"));
+        setContentView(R.layout.activity_02_register);
 
         Window window = getWindow();
         window.getDecorView().setSystemUiVisibility(
@@ -49,10 +43,9 @@ public class activity_02_auth extends AppCompatActivity {
                 .setFrameClearDrawable(windowBackground)
                 .setBlurRadius(12f);
 
-        Button loginButton = findViewById(R.id.login);
-        loginButton.setOnClickListener(v -> {
-            Intent intent = new Intent(activity_02_auth.this, activity_04_dashboard.class);
+        Button signUpButton = findViewById(R.id.loginscreen);
+        signUpButton.setOnClickListener(v -> {
+            Intent intent = new Intent(activity_02_register.this, activity_01_auth.class);
             startActivity(intent);
         });
-    }
-}
+}}
