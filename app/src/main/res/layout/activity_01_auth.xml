@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#101010"
+        android:gravity="center|bottom">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#101010"
+            android:gravity="center|bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/not_registered_yet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/m_plus_rounded1c_regular"
+                android:gravity="center"
+                android:text="@string/not_registered_yet"
+                android:textColor="#404040" />
+
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="6dp"/>
+
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:fontFamily="@font/m_plus_rounded1c_regular"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:background="@android:color/transparent"
+                android:text="@string/signup"
+                android:textColor="#404040" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="547dp"
+        android:contentDescription="@string/fisioterapeuta_auxiliando_paciente"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_auth_screen" />
+
+    <LinearLayout
+        android:id="@+id/motionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="642dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginBottom="38dp"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="10dp"
+        app:layoutDescription="@xml/auth_screen_scene">
+    </LinearLayout>
+</FrameLayout>
