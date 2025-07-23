@@ -11,4 +11,15 @@
     <string name="signup">Signup!</string>
     <string name="fisioterapeuta_auxiliando_paciente">Fisioterapeuta auxiliando paciente</string>
     <string name="default_web_client_id">744179331678-jc3atm79br7jaibkj0on55vlqai8ketk.apps.googleusercontent.com</string>
+    <string name="cone_de_gr_fico">Ícone de Gráfico</string>
+    <string name="sem_hist_rico_do_paciente">Sem Histórico do Paciente:</string>
+    <string name="fila_de_pacientes">Fila de pacientes</string>
+    <string name="sem_hist_rico_do_pacientes">Sem Histórico do Paciente:</string>
+    <string name="cone_de_gr_ficos">Ícone de Gráfico</string>
+    <string name="selecione_um_daco">Selecione um DACO™:</string>
+    <string name="menu">Menu</string>
+    <string name="start">Start</string>
+    <string name="pacientes_simultaneos">Pacientes simultaneos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
