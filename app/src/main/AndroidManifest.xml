@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
 
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"
+        tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"
+        tools:targetApi="s" />
+
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -20,8 +42,12 @@
         android:theme="@style/YourThemeName">
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_01_splash"
-            android:exported="true">
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_00_splash"
+            android:exported="true"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.supports_high_refresh_rate"
+                android:value="true" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -30,27 +56,33 @@
 
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_02_auth"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_01_auth"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden">
+            <meta-data
+                android:name="android.supports_high_refresh_rate"
+                android:value="true" />
+        </activity>
+
+        <activity
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_02_register"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_03_register"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_03_dashboard"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_04_dashboard"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_04_profile"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_05_profile"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_05_subscription"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_06_subscription"
-            android:exported="false" />
-
-        <activity
-            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_07_data_export"
+            android:name="com.example.fisiotracker.fisio_tracker_activities.activity_06_data_export"
             android:exported="false" />
     </application>
 
