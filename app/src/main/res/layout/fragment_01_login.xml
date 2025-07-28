@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fisio_tracker_activities.fragment_01_login">
+    tools:context=".ft_activities.fragment_01_login">
 
     <eightbitlab.com.blurview.BlurView
         android:id="@+id/glass"
@@ -15,7 +15,8 @@
         android:clipToOutline="true"
         android:gravity="center"
         android:paddingStart="12dp"
-        android:paddingEnd="12dp">
+        android:paddingEnd="12dp"
+        tools:ignore="UnusedAttribute">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,61 +32,38 @@
                 android:textColor="@color/white"
                 android:textSize="85sp" />
 
-            <FrameLayout
+
+
+            <EditText
+                android:id="@+id/email_textfield"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginBottom="26dp">
+                android:background="@drawable/shape_text_field"
+                android:fontFamily="@font/m_plus_rounded1c_regular"
+                android:hint="@string/email"
+                android:drawableEnd="@drawable/ic_email"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,TextFields" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/shape_text_field"
-                    android:fontFamily="@font/m_plus_rounded1c_regular"
-                    android:hint="@string/email"
-                    android:paddingStart="16dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:ignore="Autofill,RtlSymmetry,TextFields" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="center|end"
-                    android:layout_margin="16dp"
-                    android:background="@drawable/ic_mail"
-                    tools:ignore="ContentDescription" />
-            </FrameLayout>
-
-
-            <FrameLayout
+            <EditText
+                android:id="@+id/password_textfield"
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:autofillHints=""
-                    android:background="@drawable/shape_text_field"
-                    android:fontFamily="@font/m_plus_rounded1c_regular"
-                    android:hint="@string/senha"
-                    android:inputType="textPassword"
-                    android:paddingStart="16dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:ignore="RtlSymmetry" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="center|end"
-                    android:layout_margin="16dp"
-                    android:background="@drawable/ic_pass"
-                    tools:ignore="ContentDescription" />
-            </FrameLayout>
+                android:layout_height="50dp"
+                android:drawableEnd="@drawable/ic_password"
+                android:background="@drawable/shape_text_field"
+                android:fontFamily="@font/m_plus_rounded1c_regular"
+                android:hint="@string/senha"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,RtlSymmetry" />
 
             <LinearLayout
                 android:layout_width="match_parent"

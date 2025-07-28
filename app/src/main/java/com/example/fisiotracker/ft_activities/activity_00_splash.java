@@ -1,4 +1,4 @@
-package com.example.fisiotracker.fisio_tracker_activities;
+package com.example.fisiotracker.ft_activities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.fisiotracker.R;
-import com.example.fisiotracker.fisio_tracker_services.service_00_cache_loader;
+import com.example.fisiotracker.ft_services.service_00_cache_loader;
 
 public class activity_00_splash extends AppCompatActivity {
 

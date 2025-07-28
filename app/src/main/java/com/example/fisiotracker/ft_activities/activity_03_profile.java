@@ -1,4 +1,4 @@
-package com.example.fisiotracker.fisio_tracker_activities;
+package com.example.fisiotracker.ft_activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

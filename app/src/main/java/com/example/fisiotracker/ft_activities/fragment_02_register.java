@@ -1,4 +1,4 @@
-package com.example.fisiotracker.fisio_tracker_activities;
+package com.example.fisiotracker.ft_activities;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -148,7 +148,7 @@
                                 android:layout_gravity="center_horizontal"
                                 android:layout_marginTop="8dp">
 
-                                <com.example.fisiotracker.fisio_tracker_graphs.graph_01_speedometer
+                                <com.example.fisiotracker.ft_graphs.graph_01_speedometer
                                     android:id="@+id/speedView"
                                     android:layout_width="336sp"
                                     android:layout_height="match_parent"
@@ -257,7 +257,7 @@
                             android:elevation="2sp"
                             android:orientation="vertical">
 
-                            <com.example.fisiotracker.fisio_tracker_graphs.graph_02_dispersal
+                            <com.example.fisiotracker.ft_graphs.graph_02_dispersal
                                 android:id="@+id/chartView"
                                 android:layout_width="match_parent"
                                 android:layout_height="232dp"

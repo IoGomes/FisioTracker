@@ -1,4 +1,4 @@
-package com.example.fisiotracker.fisio_tracker_services;
+package com.example.fisiotracker.ft_services;
 
 import android.content.Context;
 
