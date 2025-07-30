@@ -4,35 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ft_activities.fragment_01_login">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <eightbitlab.com.blurview.BlurView
         android:id="@+id/glass"
         android:layout_width="match_parent"
         android:layout_height="642dp"
-        android:background="@drawable/shape_rounded_corner_rectangle"
+        android:background="@drawable/bg_auth_container"
         android:clipToOutline="true"
-        android:gravity="center"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
+        android:layout_gravity="bottom"
+        android:padding="12dp"
         tools:ignore="UnusedAttribute">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="bottom">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="308dp"
+                android:layout_height="283dp"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:src="@drawable/img_company"
                 android:textColor="@color/white"
                 android:textSize="85sp" />
-
-
 
             <EditText
                 android:id="@+id/email_textfield"
@@ -45,9 +42,13 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textColorHint="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 tools:ignore="Autofill,TextFields" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="16dp" />
 
             <EditText
                 android:id="@+id/password_textfield"
@@ -61,7 +62,7 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textColorHint="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 tools:ignore="Autofill,RtlSymmetry" />
 
@@ -71,15 +72,21 @@
                 android:gravity="center"
                 android:padding="8dp">
 
-                <RadioButton
+                <Switch
                     android:id="@+id/checkBoxExample"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:checked="false"
                     android:fontFamily="@font/m_plus_rounded1c_regular"
-                    android:text="@string/permanecer_conectado"
-                    android:textColor="#707070" />
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Permanecer conectado"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/m_plus_rounded_1c_thin">
+                </TextView>
 
                 <Space
                     android:layout_width="24dp"
@@ -89,9 +96,9 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/m_plus_rounded1c_regular"
+                    android:fontFamily="@font/m_plus_rounded_1c_thin"
                     android:text="@string/esqueceu_a_senha"
-                    android:textColor="#707070" />
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
@@ -102,7 +109,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/rounded_frame"
                     android:elevation="2dp">
 
@@ -144,7 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="15dp"
                 android:layout_gravity="center"
-                android:layout_margin="8dp">
+                android:layout_marginTop="12dp">
 
                 <View
                     android:layout_width="102dp"
@@ -157,7 +164,7 @@
                     android:layout_height="22dp"
                     android:layout_gravity="center"
                     android:layout_margin="6dp"
-                    android:fontFamily="@font/m_plus_rounded1c_regular"
+                    android:fontFamily="@font/m_plus_rounded_1c_thin"
                     android:gravity="center_horizontal"
                     android:text="@string/or_login_with"
                     android:textColor="#707070" />
@@ -169,28 +176,33 @@
                     android:background="@drawable/ic_auth_screen_separate_line" />
             </LinearLayout>
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="08dp">
+
+            </Space>
+
             <LinearLayout
-                style="?android:attr/buttonBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
 
                 <Button
                     android:id="@+id/google"
-                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
-                    android:background="@drawable/android_dark_rd_na" />
+                    android:background="@drawable/ic_google_auth"
+                    />
 
                 <Space
                     android:layout_width="36dp"
                     android:layout_height="wrap_content" />
 
                 <Button
-                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/github_mark_white" />
+                    android:background="@drawable/ic_github_auth"
+                    />
             </LinearLayout>
 
         </LinearLayout>
