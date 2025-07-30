@@ -179,7 +179,7 @@
                                 android:layout_height="52sp"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_margin="12sp"
-                                android:background="@drawable/shape_text_field"
+                                android:background="@drawable/shape_edit_text_field"
                                 android:elevation="2sp">
 
                                 <TextView
