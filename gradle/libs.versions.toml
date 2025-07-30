@@ -1,6 +1,7 @@
 [versions]
 agp = "8.11.1"
 blurview = "version-2.0.6"
+coreSplashscreen = "1.0.1"
 credentials = "<latest version>"
 credentialsPlayServicesAuth = "1.2.2"
 credentialsVersion = "1.2.2"
@@ -15,9 +16,11 @@ lottie = "6.1.0"
 material = "1.12.0"
 playServicesAuth = "20.7.0"
 speedviewlib = "1.6.1"
+firebaseDatabase = "22.0.0"
 
 [libraries]
 blurview = { module = "com.github.Dimezis:BlurView", version.ref = "blurview" }
+core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 credentials = { module = "androidx.credentials:credentials", version.ref = "credentials" }
 credentials-play-services-auth = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentials" }
 credentials-play-services-auth-v122 = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentialsPlayServicesAuth" }
@@ -34,6 +37,7 @@ lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 speedviewlib = { module = "com.github.anastr:speedviewlib", version.ref = "speedviewlib" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

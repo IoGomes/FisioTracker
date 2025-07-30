@@ -1,36 +1,27 @@
 {
   "project_info": {
-    "project_number": "744179331678",
-    "project_id": "fisiotracker",
-    "storage_bucket": "fisiotracker.firebasestorage.app"
+    "project_number": "852547995446",
+    "firebase_url": "https://fisiotracker-77e33-default-rtdb.firebaseio.com",
+    "project_id": "fisiotracker-77e33",
+    "storage_bucket": "fisiotracker-77e33.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:744179331678:android:ad77dc085916ccff3bbacf",
+        "mobilesdk_app_id": "1:852547995446:android:c3e2be36c8c49fdb665597",
         "android_client_info": {
           "package_name": "com.example.fisiotracker"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "744179331678-jc3atm79br7jaibkj0on55vlqai8ketk.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCBIg_-IrPOh9QwtZSyuv6Sxgum9qBaSmc"
+          "current_key": "AIzaSyBdov0jZ1AhjR7FE5jqls1zigJ-lT8xows"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "744179331678-jc3atm79br7jaibkj0on55vlqai8ketk.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
