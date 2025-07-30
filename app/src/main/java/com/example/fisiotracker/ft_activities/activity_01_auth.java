@@ -10,7 +10,9 @@ import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.view.animation.OvershootInterpolator;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +35,8 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class activity_01_auth extends AppCompatActivity {
 
@@ -53,6 +57,8 @@ public class activity_01_auth extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
 
         Fragment fragment01 = new fragment_01_login();
 
