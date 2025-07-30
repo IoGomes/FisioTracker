@@ -42,7 +42,7 @@
         android:theme="@style/YourThemeName">
 
         <activity
-            android:name="com.example.fisiotracker.ft_activities.activity_00_splash"
+            android:name="com.example.fisiotracker.FisioTracker.Android.ft_activities.activity_00_splash"
             android:exported="true"
             android:noHistory="true">
             <meta-data
@@ -56,7 +56,7 @@
 
 
         <activity
-            android:name="com.example.fisiotracker.ft_activities.activity_01_auth"
+            android:name="com.example.fisiotracker.FisioTracker.Android.ft_activities.activity_01_auth"
             android:exported="false"
             android:hardwareAccelerated="true"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden">
@@ -66,19 +66,19 @@
         </activity>
 
         <activity
-            android:name="com.example.fisiotracker.ft_activities.activity_02_dashboard"
+            android:name="com.example.fisiotracker.FisioTracker.Android.ft_activities.activity_02_dashboard"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.ft_activities.activity_03_profile"
+            android:name="com.example.fisiotracker.FisioTracker.Android.ft_activities.activity_03_profile"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.ft_activities.activity_04_subscription"
+            android:name="com.example.fisiotracker.FisioTracker.Android.ft_activities.activity_04_subscription"
             android:exported="false" />
 
         <activity
-            android:name="com.example.fisiotracker.ft_activities.activity_05_data_export"
+            android:name="com.example.fisiotracker.FisioTracker.Android.ft_activities.activity_05_data_export"
             android:exported="false" />
     </application>
 
