@@ -27,25 +27,21 @@
                 android:id="@+id/not_registered_yet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/m_plus_rounded1c_regular"
+                android:fontFamily="@font/m_plus_rounded_1c_thin"
                 android:gravity="center"
                 android:text="@string/not_registered_yet"
-                android:textColor="#404040" />
-
-            <Space
-                android:layout_width="6dp"
-                android:layout_height="6dp"/>
+                android:textColor="#808080"/>
 
             <Button
                 android:id="@+id/signup"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="20dp"
-                android:fontFamily="@font/m_plus_rounded1c_regular"
+                android:fontFamily="@font/m_plus_rounded_1c_thin"
                 android:gravity="center"
                 android:textAllCaps="false"
                 android:background="@android:color/transparent"
                 android:text="@string/signup"
-                android:textColor="#404040" />
+                android:textColor="#808080" />
         </LinearLayout>
     </LinearLayout>
 
@@ -60,7 +56,7 @@
     <LinearLayout
         android:id="@+id/motionLayout"
         android:layout_width="match_parent"
-        android:layout_height="642dp"
+        android:layout_height="700dp"
         android:layout_gravity="bottom"
         android:layout_marginHorizontal="6dp"
         android:layout_marginBottom="38dp"
