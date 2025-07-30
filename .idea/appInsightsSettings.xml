@@ -10,9 +10,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.fisiotracker" />
-                  <option name="mobileSdkAppId" value="1:744179331678:android:ad77dc085916ccff3bbacf" />
-                  <option name="projectId" value="fisiotracker" />
-                  <option name="projectNumber" value="744179331678" />
+                  <option name="mobileSdkAppId" value="1:852547995446:android:c3e2be36c8c49fdb665597" />
+                  <option name="projectId" value="fisiotracker-77e33" />
+                  <option name="projectNumber" value="852547995446" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
