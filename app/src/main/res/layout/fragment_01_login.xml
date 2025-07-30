@@ -10,7 +10,7 @@
         android:id="@+id/glass"
         android:layout_width="match_parent"
         android:layout_height="642dp"
-        android:background="@drawable/bg_auth_container"
+        android:background="@drawable/shape_auth_container"
         android:clipToOutline="true"
         android:layout_gravity="bottom"
         android:padding="12dp"
@@ -27,7 +27,7 @@
                 android:layout_height="283dp"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:src="@drawable/img_company"
+                android:src="@drawable/logo_company"
                 android:textColor="@color/white"
                 android:textSize="85sp" />
 

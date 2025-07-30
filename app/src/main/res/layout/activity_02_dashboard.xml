@@ -35,7 +35,7 @@
                         android:id="@+id/start"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/bg_gradient_button"
+                        android:background="@drawable/button_bg_blue_gradient"
                         android:fontFamily="@font/m_plus_rounded1c_regular"
                         android:stateListAnimator="@animator/scale_animation"
                         android:text="@string/start"
@@ -54,7 +54,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_inactive_gradient_button"
+                android:background="@drawable/button_bg_inactive_gradient"
                 android:clickable="true"
                 android:elevation="10dp"
                 android:focusable="true"
@@ -67,7 +67,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_red_gradient_button"
+                android:background="@drawable/button_bg_red_gradient"
                 android:clickable="true"
                 android:elevation="10dp"
                 android:focusable="true"
@@ -236,7 +236,7 @@
                                 android:layout_gravity="bottom|end"
                                 android:layout_margin="12dp"
                                 android:layout_marginTop="30dp"
-                                android:background="@drawable/ic_expand_shape"
+                                android:background="@drawable/button_expand_shape"
                                 android:elevation="2dp" />
 
                         </FrameLayout>

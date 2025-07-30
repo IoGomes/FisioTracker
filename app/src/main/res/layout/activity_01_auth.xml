@@ -51,7 +51,7 @@
         android:layout_height="547dp"
         android:contentDescription="@string/fisioterapeuta_auxiliando_paciente"
         android:scaleType="centerCrop"
-        android:src="@drawable/bg_auth_screen" />
+        android:src="@drawable/image_bg_auth_screen" />
 
     <LinearLayout
         android:id="@+id/motionLayout"

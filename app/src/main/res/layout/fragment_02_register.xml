@@ -9,7 +9,7 @@
         android:id="@+id/glass"
         android:layout_width="match_parent"
         android:layout_height="700dp"
-        android:background="@drawable/bg_auth_container"
+        android:background="@drawable/shape_auth_container"
         android:gravity="center"
         android:padding="12dp"
         android:clipToOutline="true"
@@ -24,7 +24,7 @@
             <Button
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:background="@drawable/arrow_left">
+                android:background="@drawable/ic_arrow_left">
             </Button>
 
             <Space
