@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.fisiotracker"
+    namespace = "FisioTracker.Android"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.fisiotracker"
+        applicationId = "FisioTracker.Android"
         minSdk = 28
         targetSdk = 35
         versionCode = 1

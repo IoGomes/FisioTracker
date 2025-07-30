@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import com.airbnb.lottie.LottieAnimationView;
-import com.example.fisiotracker.R;
+import FisioTracker.Android.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import eightbitlab.com.blurview.BlurView;

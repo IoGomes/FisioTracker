@@ -11,7 +11,7 @@ import android.view.Window;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.example.fisiotracker.R;
+import FisioTracker.Android.R;
 import FisioTracker.Android.ft_services.service_00_cache_loader;
 
 public class activity_00_splash extends AppCompatActivity {

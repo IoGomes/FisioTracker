@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:852547995446:android:c3e2be36c8c49fdb665597",
         "android_client_info": {
-          "package_name": "com.example.fisiotracker"
+          "package_name": "FisioTracker.Android"
         }
       },
       "oauth_client": [],

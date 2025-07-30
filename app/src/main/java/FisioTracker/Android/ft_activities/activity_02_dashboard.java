@@ -37,7 +37,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import FisioTracker.Android.ft_graphs.graph_01_speedometer;
-import com.example.fisiotracker.R;
+import FisioTracker.Android.R;
 import com.google.android.material.navigation.NavigationView;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
