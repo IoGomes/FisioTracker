@@ -1,4 +1,4 @@
-package FisioTracker.Android.ft_activities;
+package FisioTracker.Android.FisioTracker_Activities;
 
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
@@ -36,7 +36,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import FisioTracker.Android.ft_graphs.graph_01_speedometer;
+import FisioTracker.Android.FisioTracker_Graphs.graph_01_speedometer;
 import FisioTracker.Android.R;
 import com.google.android.material.navigation.NavigationView;
 import java.nio.charset.StandardCharsets;

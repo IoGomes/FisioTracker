@@ -1,4 +1,4 @@
-package FisioTracker.Android.ft_graphs;
+package FisioTracker.Android.FisioTracker_Graphs;
 
 import android.content.Context;
 import android.graphics.Canvas;

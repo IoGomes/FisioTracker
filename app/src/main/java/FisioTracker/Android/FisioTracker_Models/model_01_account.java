@@ -1,4 +1,4 @@
-package FisioTracker.Android.ft_models;
+package FisioTracker.Android.FisioTracker_Models;
 
 public class model_01_account {
 

@@ -1,4 +1,4 @@
-package FisioTracker.Android.ft_activities;
+package FisioTracker.Android.FisioTracker_Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
