@@ -22,4 +22,6 @@
     <string name="pacientes_simultaneos">Pacientes simultaneos</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="concordo_com_os_termos_e_condi_es">Concordo com os Termos e condições</string>
+    <string name="concordo_com_a_politica_de_privacidade">Concordo com a Politica de Privacidade</string>
 </resources>
