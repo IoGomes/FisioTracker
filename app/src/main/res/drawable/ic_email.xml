@@ -1,20 +1,10 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="50dp"
-    android:height="50dp"
-    android:viewportWidth="511"
-    android:viewportHeight="511">
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="256"
+    android:viewportHeight="256">
 
-    <!-- Filled envelope flap -->
     <path
-        android:fillColor="#505050"
-        android:pathData="M494,16l-234.32,180L17,16h477M494,0H17C10.1,0,3.97,4.43,1.81,10.98c-2.17,6.55.12,13.76,5.66,17.87l242.68,180c2.83,2.1,6.18,3.15,9.53,3.15s6.88,-1.11,9.75,-3.31L503.75,28.69c5.43,-4.17,7.61,-11.35,5.4,-17.84 -2.2,-6.49 -8.3,-10.85 -15.15,-10.85h0ZM494,32h0,0Z" />
-
-    <!-- Envelope border -->
-    <path
-        android:fillColor="@android:color/transparent"
-        android:strokeColor="#505050"
-        android:strokeLineCap="round"
-        android:strokeLineJoin="round"
-        android:strokeWidth="16"
-        android:pathData="M8,16v369h495V16" />
+        android:fillColor="#bababa"
+        android:pathData="M224,50H32a6,6,0,0,0 -6,6V192a14,14,0,0,0 14,14H216a14,14,0,0,0 14,-14V56A6,6,0,0,0 224,50Zm-96,85.86L47.42,62H208.58ZM101.67,128,38,186.36V69.64Zm8.88,8.14L124,148.42a6,6,0,0,0 8.1,0l13.4,-12.28L208.58,194H47.43ZM154.33,128,218,69.64V186.36Z" />
 </vector>
