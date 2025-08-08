@@ -34,7 +34,7 @@
 
             <Button
                 android:id="@+id/signup"
-                android:layout_width="40dp"
+                android:layout_width="50dp"
                 android:layout_height="20dp"
                 android:fontFamily="@font/m_plus_rounded_1c_thin"
                 android:gravity="center"
@@ -45,20 +45,25 @@
         </LinearLayout>
     </LinearLayout>
 
-    <ImageView
+    <LinearLayout
         android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="547dp"
-        android:contentDescription="@string/fisioterapeuta_auxiliando_paciente"
-        android:scaleType="centerCrop"
-        android:src="@drawable/image_bg_auth_screen" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="547dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_bg_auth_screen" />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/motionLayout"
         android:layout_width="match_parent"
         android:layout_height="700dp"
         android:layout_gravity="bottom"
-        android:layout_marginHorizontal="6dp"
+        android:layout_marginHorizontal="8dp"
         android:layout_marginBottom="38dp"
         android:orientation="vertical"
         app:cardBackgroundColor="@android:color/transparent"

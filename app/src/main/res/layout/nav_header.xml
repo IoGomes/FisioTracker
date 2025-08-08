@@ -1,30 +1,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="@android:color/transparent">
+    android:layout_height="200dp">
+
+
 
     <eightbitlab.com.blurview.BlurView
         android:id="@+id/glass"
         android:layout_width="match_parent"
-        android:layout_height="678dp"
-        android:background="@drawable/shape_rounded_corner_rectangle"
+        android:layout_height="200dp"
+        android:background="@drawable/shape_superior_nav_banner"
         android:clipToOutline="true"
-        android:gravity="center"
         android:paddingLeft="04dp"
         android:paddingTop="04dp"
         android:paddingRight="04dp"
-        android:paddingBottom="04dp"
-        android:requiresFadingEdge="vertical">
+        android:paddingBottom="04dp">
 
-    <ImageView
-        android:id="@+id/profile_image"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_centerInParent="true"
-        android:background="@drawable/ic_circle_background"
-        android:padding="4dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_profile" />
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_circle_background"
+            android:padding="08dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:paddingStart="12dp"
+            android:paddingBottom="30dp"
+            android:text="Ítalo Oliveira Gomes"
+            android:textColor="@color/white"
+            android:textSize="12dp"></TextView>
 
     </eightbitlab.com.blurview.BlurView>
 

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:shape="rectangle"
     tools:ignore="ExtraText">
-<corners android:radius="24dp">
+<corners android:radius="28dp">
 </corners>
 <solid android:color="#99202020">
 </solid>

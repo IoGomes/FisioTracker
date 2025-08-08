@@ -9,10 +9,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="FisioTracker.Android" />
+                  <option name="mobileSdkAppId" value="1:852547995446:android:c3e2be36c8c49fdb665597" />
+                  <option name="projectId" value="fisiotracker-77e33" />
+                  <option name="projectNumber" value="852547995446" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

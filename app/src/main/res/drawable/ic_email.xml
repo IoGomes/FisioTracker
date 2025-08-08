@@ -1,10 +1,24 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="32dp"
-    android:height="32dp"
-    android:viewportWidth="256"
-    android:viewportHeight="256">
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
 
+    <!-- Outer envelope shape -->
     <path
-        android:fillColor="#bababa"
-        android:pathData="M224,50H32a6,6,0,0,0 -6,6V192a14,14,0,0,0 14,14H216a14,14,0,0,0 14,-14V56A6,6,0,0,0 224,50Zm-96,85.86L47.42,62H208.58ZM101.67,128,38,186.36V69.64Zm8.88,8.14L124,148.42a6,6,0,0,0 8.1,0l13.4,-12.28L208.58,194H47.43ZM154.33,128,218,69.64V186.36Z" />
+        android:pathData="M7.83,7.83h31.33c2.16,0 3.92,1.76 3.92,3.92v23.5c0,2.16 -1.76,3.92 -3.92,3.92H7.83c-2.16,0 -3.92,-1.76 -3.92,-3.92v-23.5c0,-2.16 1.76,-3.92 3.92,-3.92"
+        android:strokeColor="#909090"
+        android:strokeWidth="1"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Envelope flap -->
+    <path
+        android:pathData="M43.08,13.71L25.51,24.87a3.8,3.8 0 0 1 -4.03,0L3.92,13.71"
+        android:strokeColor="#909090"
+        android:strokeWidth="1"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
 </vector>

@@ -1,30 +1,33 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Itens principais -->
     <item
         android:id="@+id/nav_dashboard"
+        android:icon="@drawable/ic_dashboard"
         android:title="Dashboard" />
 
     <item
-        android:id="@+id/nav_settings"
-        android:title="Configurações" />
+        android:id="@+id/pacient_list"
+        android:title="Lista de Pacientes"
+        android:icon="@drawable/ic_logout"/>
 
     <item
         android:id="@+id/nav_export_data"
+        android:icon="@drawable/ic_export"
         android:title="Exportar Dados" />
 
-    <!-- Subheader (não clicável) -->
     <item
-        android:title="Outras opções">
-        <menu>
-            <item
-                android:id="@+id/nav_pricing"
-                android:title="Planos e Assinaturas"
-                android:icon="@drawable/ic_profile" />
-            <item
-                android:id="@+id/nav_logout"
-                android:title="Sair" />
-        </menu>
-    </item>
+        android:id="@+id/nav_pricing"
+        android:icon="@drawable/ic_subscription"
+        android:title="Planos e Assinaturas" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_config"
+        android:title="Configurações" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_logout"/>
 
 </menu>

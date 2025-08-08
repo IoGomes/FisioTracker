@@ -5,13 +5,6 @@
     android:layout_height="match_parent"
     android:background="#101010">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:background="@drawable/image_bg_auth_screen">
-
-    </ImageView>
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
         android:layout_width="500dp"

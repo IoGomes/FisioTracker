@@ -24,7 +24,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="283dp"
+                android:layout_height="300dp"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:src="@drawable/image_logo_company"
@@ -54,7 +54,7 @@
                 android:id="@+id/password_textfield"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:drawableEnd="@drawable/ic_password"
+                android:drawableEnd="@drawable/ic_pass"
                 android:background="@drawable/shape_edit_text_field"
                 android:fontFamily="@font/m_plus_rounded1c_regular"
                 android:hint="@string/senha"
@@ -66,11 +66,13 @@
                 android:textStyle="bold"
                 tools:ignore="Autofill,RtlSymmetry" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="12dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="8dp">
+                android:layout_height="wrap_content">
 
                 <Switch
                     android:id="@+id/checkBoxExample"
@@ -85,7 +87,8 @@
                     android:layout_height="wrap_content"
                     android:text="Permanecer conectado"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/m_plus_rounded_1c_thin">
+                    android:fontFamily="@font/m_plus_rounded_1c_thin"
+                    android:layout_gravity="center">
                 </TextView>
 
                 <Space
@@ -98,8 +101,13 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/m_plus_rounded_1c_thin"
                     android:text="@string/esqueceu_a_senha"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
             </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="12dp" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -167,7 +175,7 @@
                     android:fontFamily="@font/m_plus_rounded_1c_thin"
                     android:gravity="center_horizontal"
                     android:text="@string/or_login_with"
-                    android:textColor="#707070" />
+                    android:textColor="@color/white" />
 
                 <View
                     android:layout_width="102dp"
@@ -179,7 +187,6 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="08dp">
-
             </Space>
 
             <LinearLayout

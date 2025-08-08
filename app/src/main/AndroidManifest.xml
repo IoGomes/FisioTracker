@@ -44,7 +44,8 @@
         <activity
             android:name="FisioTracker.Android.FisioTracker_Activities.activity_00_splash"
             android:exported="true"
-            android:noHistory="true">
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
             <meta-data
                 android:name="android.supports_high_refresh_rate"
                 android:value="true" />
@@ -59,6 +60,7 @@
             android:name="FisioTracker.Android.FisioTracker_Activities.activity_01_auth"
             android:exported="false"
             android:hardwareAccelerated="true"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden">
             <meta-data
                 android:name="android.supports_high_refresh_rate"
@@ -66,18 +68,22 @@
         </activity>
 
         <activity
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
             android:name="FisioTracker.Android.FisioTracker_Activities.activity_02_dashboard"
             android:exported="false" />
 
         <activity
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
             android:name="FisioTracker.Android.FisioTracker_Activities.activity_03_profile"
             android:exported="false" />
 
         <activity
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
             android:name="FisioTracker.Android.FisioTracker_Activities.activity_04_subscription"
             android:exported="false" />
 
         <activity
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
             android:name="FisioTracker.Android.FisioTracker_Activities.activity_05_data_export"
             android:exported="false" />
     </application>

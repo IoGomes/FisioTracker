@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_dialog_background"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/menu_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end"
+        android:contentDescription="Menu"
+        android:background="@drawable/ic_close_x"
+        android:padding="8dp" />
+
+    <Space
+        android:layout_width="08dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/addpaciente"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Novo Paciente"
+        android:background="@drawable/shape_edit_text_field"
+        android:textAllCaps="false"/>
+
+    <Space
+        android:layout_width="08dp"
+        android:layout_height="08dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Nova Sessão Simultanea"
+        android:background="@drawable/shape_edit_text_field"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

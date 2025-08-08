@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Clipboard top section -->
+    <path
+        android:pathData="M29.375,3.917 H17.625
+                          c-1.083,0 -1.958,0.875 -1.958,1.958v3.917
+                          c0,1.175 0.875,1.958 1.958,1.958h11.75
+                          c1.175,0 1.958,-0.783 1.958,-1.958V5.875
+                          c0,-1.083 -0.783,-1.958 -1.958,-1.958Z"
+        android:strokeColor="#909090"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+
+    <!-- Clipboard body and side elements -->
+    <path
+        android:pathData="M15.667,7.833H11.75
+                          c-2.167,0 -3.917,1.75 -3.917,3.917v27.417
+                          c0,2.167 1.75,3.917 3.917,3.917h23.5
+                          c2.167,0 3.917,-1.75 3.917,-3.917M31.333,7.833h3.917
+                          c2.167,0 3.917,1.75 3.917,3.917v3.917
+                          M21.625,27.417h19.583"
+        android:strokeColor="#909090"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+
+    <!-- Arrow for "Paste" action -->
+    <path
+        android:pathData="M33.292,19.583l7.833,7.833 -7.833,7.833"
+        android:strokeColor="#909090"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+</vector>
