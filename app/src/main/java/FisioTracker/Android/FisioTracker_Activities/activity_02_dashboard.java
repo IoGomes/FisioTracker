@@ -14,6 +14,7 @@ import android.bluetooth.le.ScanResult;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PointF;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.ToneGenerator;
 import android.os.Build;
@@ -30,20 +31,26 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 import android.media.AudioManager;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import FisioTracker.Android.FisioTracker_Graphs.graph_01_speedometer;
+
+import FisioTracker.Android.FisioTracker_Dialogs.Dialog_03_Session_Options;
+import FisioTracker.Android.OrtoTracker_Graphs.graph_01_speedometer;
 import FisioTracker.Android.R;
+
 import com.google.android.material.navigation.NavigationView;
+
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
+
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanSettings;
 
@@ -53,6 +60,12 @@ public class activity_02_dashboard extends AppCompatActivity {
 
     private static final int REQUEST_BLUETOOTH_CONNECT = 1001;
     private BlurView blurView;
+
+    private BlurView blurView2;
+    private BlurView blurView3;
+    private BlurView blurView4;
+    private BlurView blurView5;
+
     private BluetoothAdapter bluetoothAdapter;
     private final ArrayList<String> bluetoothDevices = new ArrayList<>();
     private ArrayAdapter<String> adapter;
@@ -79,7 +92,7 @@ public class activity_02_dashboard extends AppCompatActivity {
         Random random = new Random();
 
         int quantidadePontos = 10;
-        for(int i = 1; i <= quantidadePontos; i++) {
+        for (int i = 1; i <= quantidadePontos; i++) {
             float x = i;
             float y = random.nextFloat() * 10f; // valor entre 0 e 10
             dadosAleatorios.add(new PointF(x, y));
@@ -99,9 +112,17 @@ public class activity_02_dashboard extends AppCompatActivity {
         }
 
         blurView = findViewById(R.id.glass);
-        ViewGroup rootView = (ViewGroup) window.getDecorView().getRootView();
-        Drawable windowBackground = window.getDecorView().getBackground();
-        blurView.setupWith(rootView).setFrameClearDrawable(windowBackground).setBlurRadius(20f);
+        blurView2 = findViewById(R.id.glass2);
+        blurView3 = findViewById(R.id.glass3);
+        blurView4 = findViewById(R.id.nav);
+
+        ViewGroup decorView = (ViewGroup) getWindow().getDecorView();
+        Drawable windowBackground = decorView.getBackground();
+
+        blurView.setupWith(decorView).setFrameClearDrawable(windowBackground).setBlurRadius(24f);
+        blurView2.setupWith(decorView).setFrameClearDrawable(windowBackground).setBlurRadius(24f);
+        blurView3.setupWith(decorView).setFrameClearDrawable(windowBackground).setBlurRadius(24f);
+        blurView4.setupWith(decorView).setFrameClearDrawable(windowBackground).setBlurRadius(12f);
 
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -113,10 +134,6 @@ public class activity_02_dashboard extends AppCompatActivity {
 
         navigationView.setNavigationItemSelectedListener(menuItem -> {
             int id = menuItem.getItemId();
-            blurView = findViewById(R.id.glass);
-            blurView.setupWith(rootView)
-                    .setFrameClearDrawable(windowBackground)
-                    .setBlurRadius(12f);
             if (id == R.id.nav_dashboard) {
                 Toast.makeText(this, "Home clicado", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.nav_settings) {
@@ -135,15 +152,17 @@ public class activity_02_dashboard extends AppCompatActivity {
         Button bleButton = findViewById(R.id.ble);
         bleButton.setOnClickListener(v -> openBleDialog());
 
-        Button menubutton = findViewById(R.id.menuicon);
-        menubutton.setOnClickListener(v -> showCustomDialog());
+
+        Button add_Pacient = findViewById(R.id.centerButton);
+        add_Pacient.setOnClickListener(v -> {
+            Dialog_03_Session_Options.showDialog_03(this);
+        });
 
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (bluetoothAdapter == null) {
             Toast.makeText(this, "Bluetooth não suportado", Toast.LENGTH_LONG).show();
         }
     }
-
 
     private void showCustomDialog() {
         String[] options = {
@@ -185,7 +204,7 @@ public class activity_02_dashboard extends AppCompatActivity {
 
         menuIcon.setOnClickListener(v -> dialog.dismiss());
     }
-    
+
     private void handleBeeping() {
         if (!isBeeping) {
             startBeeping();
@@ -276,6 +295,13 @@ public class activity_02_dashboard extends AppCompatActivity {
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, bluetoothDevices);
         listView.setAdapter(adapter);
 
+        blurView5 = dialogView.findViewById(R.id.ble_device);
+        ViewGroup rootView = getWindow().getDecorView().findViewById(android.R.id.content);
+
+        Drawable windowBackground = getWindow().getDecorView().getBackground();
+        if (windowBackground == null) {
+            windowBackground = new ColorDrawable(Color.TRANSPARENT);
+        }
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -299,10 +325,13 @@ public class activity_02_dashboard extends AppCompatActivity {
             stopBleScan();
         });
 
-        // Iniciar scan BLE
         startBleScan();
 
         bleDialog.show();
+
+        blurView5.setupWith(rootView)
+                .setFrameClearDrawable(windowBackground)
+                .setBlurRadius(12f);
     }
 
     private BluetoothLeScanner bleScanner;
@@ -493,7 +522,7 @@ public class activity_02_dashboard extends AppCompatActivity {
             if (raw < inMin) raw = inMin;
             if (raw > inMax) raw = inMax;
 
-            return (float)(raw - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+            return (float) (raw - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
         }
 
         @Override
@@ -557,5 +586,15 @@ public class activity_02_dashboard extends AppCompatActivity {
             currentSpeed = speed;
             handleBeeping();
         });
+    }
+
+    public void mostrarBotao() {
+        Button meuBotao = findViewById(R.id.luisaButton);
+        meuBotao.setVisibility(View.VISIBLE);
+    }
+
+    public void mostrarContainer() {
+        BlurView pacienteSimultaneo = findViewById(R.id.glass2);
+        pacienteSimultaneo.setVisibility(View.VISIBLE);
     }
 }

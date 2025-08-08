@@ -1,5 +1,6 @@
 package FisioTracker.Android.FisioTracker_Activities;
 
+import android.annotation.SuppressLint;
 import android.view.Display;
 import android.view.WindowManager;
 import android.os.Build;
@@ -14,8 +15,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import FisioTracker.Android.OrtoTracker_Fragments.fragment_01_login;
+import FisioTracker.Android.OrtoTracker_Fragments.fragment_02_register;
 import FisioTracker.Android.R;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -50,12 +54,15 @@ public class activity_01_auth extends AppCompatActivity {
 
     private boolean isFragment01Visible = true;
 
+    private View mRevealLayout;
+
+    @SuppressLint("WrongViewCast")
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-
 
         Fragment fragment01 = new fragment_01_login();
 
@@ -223,5 +230,4 @@ public class activity_01_auth extends AppCompatActivity {
             googleSignInClient = null;
         }
     }
-
 }

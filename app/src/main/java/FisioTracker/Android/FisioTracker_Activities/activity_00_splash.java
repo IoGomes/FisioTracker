@@ -10,11 +10,9 @@ import android.view.Window;
 import androidx.appcompat.app.AppCompatActivity;
 import com.airbnb.lottie.LottieAnimationView;
 import FisioTracker.Android.R;
-import FisioTracker.Android.FisioTracker_Services.service_00_cache_loader;
+import FisioTracker.Android.OrtoTracker_Services.service_00_cache_loader;
 
 public class activity_00_splash extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +32,7 @@ public class activity_00_splash extends AppCompatActivity {
 
         LottieAnimationView animationView = findViewById(R.id.animation_view);
         animationView.setAnimation(R.raw.lottie_00_splash_heartbeat);
-        animationView.setSpeed(2f);
+        animationView.setSpeed(2.5f);
         animationView.playAnimation();
 
         animationView.addAnimatorListener(new AnimatorListenerAdapter() {
