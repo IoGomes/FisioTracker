@@ -7,7 +7,7 @@
     android:padding="10dp">
 
     <Button
-        android:id="@+id/menu_icon"
+        android:id="@+id/dismiss_button"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="end"
@@ -19,22 +19,26 @@
         android:layout_width="08dp"
         android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/luisa"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/addpaciente"
+        android:layout_width="200dp"
         android:layout_height="50dp"
-        android:text="Luisa"
+        android:text="Individual"
+        android:drawableEnd="@drawable/ic_session_only"
         android:background="@drawable/shape_edit_text_field"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:paddingEnd="16dp"/>
 
     <Space
         android:layout_width="08dp"
         android:layout_height="08dp" />
 
-    <Button
-        android:layout_width="match_parent"
+    <EditText
+        android:layout_width="200dp"
         android:layout_height="50dp"
-        android:text="Nova Sessão Simultanea"
+        android:text="Simultanea"
+        android:paddingEnd="16dp"
+        android:drawableEnd="@drawable/ic_multiple_pacients"
         android:background="@drawable/shape_edit_text_field"
         android:textAllCaps="false"/>
 
