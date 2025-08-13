@@ -8,8 +8,6 @@
         android:right="4dp">
         <shape xmlns:android="http://schemas.android.com/apk/res/android"
             android:shape="rectangle">
-            <solid android:color="#404040" />
-            <corners android:radius="40dp" />
         </shape>
     </item>
 
@@ -18,16 +16,5 @@
         android:bottom="4dp"
         android:left="4dp"
         android:right="4dp"/>
-
-    <item>
-        <shape xmlns:android="http://schemas.android.com/apk/res/android"
-            android:shape="oval">
-
-            <stroke
-                android:width="0.8dp"
-                android:color="#009688"/>
-
-        </shape>
-    </item>
 
 </layer-list>

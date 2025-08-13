@@ -13,7 +13,7 @@
         </shape>
     </item>
 
-    <item android:drawable="@drawable/pacient"
+    <item android:drawable="@drawable/ic_pacient"
         android:top="4dp"
         android:bottom="4dp"
         android:left="4dp"

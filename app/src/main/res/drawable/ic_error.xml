@@ -1,30 +1,35 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp"
-    android:height="24dp"
+    android:width="48dp"
+    android:height="48dp"
     android:viewportWidth="48"
     android:viewportHeight="48">
 
+    <!-- Outer Circle -->
     <path
+        android:pathData="M3.9167,23.5
+            A19.5833,19.5833 0 1,0 43.0833,23.5
+            A19.5833,19.5833 0 1,0 3.9167,23.5"
         android:strokeColor="#fff"
         android:strokeWidth="1"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
-        android:fillColor="@android:color/transparent"
-        android:pathData="M7.83,23.5h31.33" />
+        android:fillColor="@android:color/transparent" />
 
+    <!-- Vertical Line -->
     <path
+        android:pathData="M23.5,15.6667 L23.5,23.5"
         android:strokeColor="#fff"
         android:strokeWidth="1"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
-        android:fillColor="@android:color/transparent"
-        android:pathData="M7.83,11.75h31.33" />
+        android:fillColor="@android:color/transparent" />
 
+    <!-- Small Dot -->
     <path
+        android:pathData="M23.5,31.3333 L23.5196,31.3333"
         android:strokeColor="#fff"
         android:strokeWidth="1"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
-        android:fillColor="@android:color/transparent"
-        android:pathData="M7.83,35.25h31.33" />
+        android:fillColor="@android:color/transparent" />
 </vector>

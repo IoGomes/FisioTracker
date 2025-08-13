@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Corpo do cadeado -->
+    <path
+        android:pathData="M9.7917,21.5417h27.4167
+            s3.9167,0 3.9167,3.9167v13.7083
+            s0,3.9167 -3.9167,3.9167H9.7917
+            s-3.9167,0 -3.9167,-3.9167v-13.7083
+            s0,-3.9167 3.9167,-3.9167"
+        android:strokeColor="#909090"
+        android:strokeWidth="1"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="@android:color/transparent" />
+
+    <!-- Parte superior (trava) -->
+    <path
+        android:pathData="M13.7083,21.5417
+            V13.7083
+            a9.7917,9.7917 0 0 1 19.5833,0
+            v7.8333"
+        android:strokeColor="#909090"
+        android:strokeWidth="1"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="@android:color/transparent" />
+</vector>

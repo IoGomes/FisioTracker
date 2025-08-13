@@ -31,17 +31,16 @@ public class graph_02_dispersal extends View {
 
     private void init(AttributeSet attrs) {
         linePaint = new Paint();
-        linePaint.setColor(Color.DKGRAY);
-        linePaint.setStrokeWidth(6);
+        linePaint.setColor(Color.WHITE);
+        linePaint.setStrokeWidth(1);
         linePaint.setStyle(Paint.Style.STROKE);
         linePaint.setAntiAlias(true);
         linePaint.setStrokeJoin(Paint.Join.ROUND);
         linePaint.setStrokeCap(Paint.Cap.ROUND);
 
-        // Nova linha laranja para os dados
         dataLinePaint = new Paint();
-        dataLinePaint.setColor(Color.parseColor("#FF8C00")); // Laranja
-        dataLinePaint.setStrokeWidth(8);
+        dataLinePaint.setColor(Color.parseColor("#00BCD4")); // Laranja
+        dataLinePaint.setStrokeWidth(1);
         dataLinePaint.setStyle(Paint.Style.STROKE);
         dataLinePaint.setAntiAlias(true);
         dataLinePaint.setStrokeJoin(Paint.Join.ROUND);
@@ -54,22 +53,20 @@ public class graph_02_dispersal extends View {
         fillPaint.setAntiAlias(true);
 
         pointPaint = new Paint();
-        pointPaint.setColor(Color.parseColor("#FF8C00")); // Pontos laranja também
-        pointPaint.setStyle(Paint.Style.FILL);
+        pointPaint.setColor(Color.parseColor("#00BCD4")); // Pontos laranja também
         pointPaint.setAntiAlias(true);
 
         axisPaint = new Paint();
-        axisPaint.setColor(Color.DKGRAY);
-        axisPaint.setStrokeWidth(4);
+        axisPaint.setColor(Color.WHITE);
+        axisPaint.setStrokeWidth(1);
         axisPaint.setStyle(Paint.Style.STROKE);
         axisPaint.setAntiAlias(true);
         axisPaint.setStrokeJoin(Paint.Join.ROUND);
         axisPaint.setStrokeCap(Paint.Cap.ROUND);
-        // Remover CornerPathEffect - vamos desenhar manualmente
 
         dashedLinePaint = new Paint();
-        dashedLinePaint.setColor(Color.DKGRAY);
-        dashedLinePaint.setStrokeWidth(2);
+        dashedLinePaint.setColor(Color.WHITE);
+        dashedLinePaint.setStrokeWidth(1);
         dashedLinePaint.setStyle(Paint.Style.STROKE);
         dashedLinePaint.setAntiAlias(true);
         dashedLinePaint.setPathEffect(new DashPathEffect(new float[]{10,10}, 0));
@@ -78,18 +75,15 @@ public class graph_02_dispersal extends View {
         labelPaint.setColor(Color.BLACK);
         labelPaint.setTextSize(40);
         labelPaint.setAntiAlias(true);
-
-        // Paint para o fundo arredondado do gráfico
         backgroundPaint = new Paint();
-        backgroundPaint.setColor(Color.WHITE); // Ou a cor que preferir
+        backgroundPaint.setColor(Color.WHITE);
         backgroundPaint.setStyle(Paint.Style.FILL);
         backgroundPaint.setAntiAlias(true);
 
-        // Paint para borda do fundo (opcional)
         borderPaint = new Paint();
         borderPaint.setColor(Color.LTGRAY);
         borderPaint.setStyle(Paint.Style.STROKE);
-        borderPaint.setStrokeWidth(2);
+        borderPaint.setStrokeWidth(1);
         borderPaint.setAntiAlias(true);
     }
 
@@ -104,18 +98,34 @@ public class graph_02_dispersal extends View {
     private Paint borderPaint; // Paint para borda do fundo
 
     private float[] dataPoints = {10, 40, 25, 60, 30, 80, 55};
+    float cornerRadiusDp = 22f;
+    float radius = cornerRadiusDp * getResources().getDisplayMetrics().density;
+    float cornerRadiusPx = cornerRadiusDp * getResources().getDisplayMetrics().density;
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        // Desenhar fundo arredondado primeiro (atrás de tudo) - REMOVIDO para focar nos eixos
-        // float cornerRadius = 22f; // 22dp de raio nos cantos
-        // RectF backgroundRect = new RectF(0, 0, getWidth(), getHeight());
-        // canvas.drawRoundRect(backgroundRect, cornerRadius, cornerRadius, backgroundPaint);
-        // canvas.drawRoundRect(backgroundRect, cornerRadius, cornerRadius, borderPaint); // Borda opcional
+        float[] radii = new float[] {
+                radius, radius,  // top-left
+                radius, radius,  // top-right
+                radius, radius,  // bottom-right
+                radius, radius   // bottom-left
+        };
 
-        float padding = 55;
+        Path clipPath = new Path();
+        clipPath.addRoundRect(
+                0, 0, getWidth(), getHeight(),
+                radii,
+                Path.Direction.CW
+        );
+
+        // 3. Aplicar clipping para arredondar cantos do canvas
+        canvas.save();
+        canvas.clipPath(clipPath);
+
+        // 4. Desenhar o gráfico normalmente (copie aqui todo seu código de desenho)
+        float padding = 4;
         float width = getWidth() - padding * 2;
         float height = getHeight() - padding * 2;
 
@@ -129,7 +139,7 @@ public class graph_02_dispersal extends View {
         int verticalLines = count;
         int horizontalLines = 4;
 
-        // Desenhar linhas de grade (verticais) - Path para aplicar cantos arredondados
+        // Linhas verticais da grade
         for (int i = 0; i < verticalLines; i++) {
             float x = originX + i * spaceBetweenPoints;
             Path verticalPath = new Path();
@@ -138,7 +148,7 @@ public class graph_02_dispersal extends View {
             canvas.drawPath(verticalPath, dashedLinePaint);
         }
 
-        // Desenhar linhas de grade (horizontais) - Path para aplicar cantos arredondados
+        // Linhas horizontais da grade
         for (int i = 0; i <= horizontalLines; i++) {
             float y = padding + i * (height / horizontalLines);
             Path horizontalPath = new Path();
@@ -147,86 +157,76 @@ public class graph_02_dispersal extends View {
             canvas.drawPath(horizontalPath, dashedLinePaint);
         }
 
-        // Desenhar eixos principais com cantos arredondados MANUAIS
-        float cornerRadius = 22f;
+        // Eixos com cantos arredondados (como você já fez manualmente)
+        float cornerRadius = cornerRadiusPx;
 
-        // Eixo Y (vertical) - do topo até antes do canto
         canvas.drawLine(originX, padding, originX, originY - cornerRadius, axisPaint);
-
-        // Eixo X (horizontal) - do canto até o fim
         canvas.drawLine(originX + cornerRadius, originY, getWidth() - padding, originY, axisPaint);
 
-        // Desenhar o canto arredondado manualmente usando Path com quadTo
         Path cornerPath = new Path();
-        cornerPath.moveTo(originX, originY - cornerRadius); // Começa no final do eixo Y
-        cornerPath.quadTo(originX, originY, originX + cornerRadius, originY); // Curva suave até o eixo X
+        cornerPath.moveTo(originX, originY - cornerRadius);
+        cornerPath.quadTo(originX, originY, originX + cornerRadius, originY);
         canvas.drawPath(cornerPath, axisPaint);
 
-        // Criar gradiente para preenchimento (laranja claro para transparente)
+        // Gradiente para preenchimento
         LinearGradient gradient = new LinearGradient(
-                0, padding, // Início (topo)
-                0, originY, // Fim (base)
-                Color.parseColor("#66FF8C00"), // Laranja claro transparente (66 = ~40% opacidade)
-                Color.TRANSPARENT, // Transparente na base
+                0, padding,
+                0, originY,
+                Color.parseColor("#00BCD4"),
+                Color.TRANSPARENT,
                 Shader.TileMode.CLAMP
         );
         fillPaint.setShader(gradient);
 
-        // Desenhar área preenchida abaixo da linha
+        // Área preenchida abaixo da linha
         if (dataPoints.length > 1) {
             Path fillPath = new Path();
-
-            // Começar do canto inferior esquerdo
             fillPath.moveTo(originX, originY);
 
-            // Subir para o primeiro ponto de dados
             float firstX = originX;
             float firstY = originY - (dataPoints[0] / maxVal) * height;
             fillPath.lineTo(firstX, firstY);
 
-            // Conectar todos os pontos de dados
             for (int i = 1; i < dataPoints.length; i++) {
                 float x = originX + i * spaceBetweenPoints;
                 float y = originY - (dataPoints[i] / maxVal) * height;
                 fillPath.lineTo(x, y);
             }
 
-            // Fechar o path descendo para a base
             float lastX = originX + (dataPoints.length - 1) * spaceBetweenPoints;
-            fillPath.lineTo(lastX, originY); // Descer para a linha base
-            fillPath.lineTo(originX, originY); // Voltar ao início
+            fillPath.lineTo(lastX, originY);
+            fillPath.lineTo(originX, originY);
             fillPath.close();
 
-            // Desenhar o preenchimento
             canvas.drawPath(fillPath, fillPaint);
         }
 
-        // Desenhar linha conectando os pontos de dados (LARANJA)
+        // Linha dos dados
         if (dataPoints.length > 1) {
             Path dataPath = new Path();
-
-            // Primeiro ponto
             float firstX = originX;
             float firstY = originY - (dataPoints[0] / maxVal) * height;
             dataPath.moveTo(firstX, firstY);
 
-            // Conectar todos os pontos
             for (int i = 1; i < dataPoints.length; i++) {
                 float x = originX + i * spaceBetweenPoints;
                 float y = originY - (dataPoints[i] / maxVal) * height;
                 dataPath.lineTo(x, y);
             }
-
-            // Desenhar a linha
             canvas.drawPath(dataPath, dataLinePaint);
         }
 
-        // Desenhar pontos de dados (círculos laranja)
+        // Pontos dos dados
         for (int i = 0; i < dataPoints.length; i++) {
             float x = originX + i * spaceBetweenPoints;
             float y = originY - (dataPoints[i] / maxVal) * height;
-            canvas.drawCircle(x, y, 12, pointPaint); // Círculos de raio 12
+            canvas.drawCircle(x, y, 12, pointPaint);
         }
+
+        canvas.save();
+        canvas.clipPath(clipPath);
+
+        canvas.restore();
     }
 
     private float getMaxValue(float[] values) {

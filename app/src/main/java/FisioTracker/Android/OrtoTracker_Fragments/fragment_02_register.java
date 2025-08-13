@@ -14,6 +14,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import eightbitlab.com.blurview.BlurView;
 import eightbitlab.com.blurview.RenderScriptBlur;
+import leakcanary.AppWatcher;
 
 public class fragment_02_register extends Fragment {
 
@@ -45,5 +46,18 @@ public class fragment_02_register extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        AppWatcher.INSTANCE.getObjectWatcher().watch(
+                getView(),
+                "Fragment view should be garbage collected"
+        );
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        AppWatcher.INSTANCE.getObjectWatcher().watch(
+                this,
+                "Fragment instance should be garbage collected"
+        );
     }
 }

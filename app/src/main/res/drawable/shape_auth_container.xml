@@ -7,4 +7,7 @@
     </corners>
     <solid android:color="#99202020">
     </solid>
+    <stroke
+        android:width="0.5dp"
+        android:color="#303030" /> <!-- border color -->
 </shape>
