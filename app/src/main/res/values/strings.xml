@@ -24,4 +24,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="concordo_com_os_termos_e_condi_es">Concordo com os Termos e condições</string>
     <string name="concordo_com_a_politica_de_privacidade">Concordo com a Politica de Privacidade</string>
+    <string name="pacient_1">pacient_1</string>
+    <string name="pacient_2">pacient_2</string>
+    <string name="linha_que_conecta">linha que conecta</string>
+    <string name="confirmar">Confirmar</string>
 </resources>
