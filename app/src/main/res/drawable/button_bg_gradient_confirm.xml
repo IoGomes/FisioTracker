@@ -6,16 +6,17 @@
             <gradient
                 android:type="linear"
                 android:angle="180"
-                android:startColor="#404040"
-                android:endColor="#404040" />
+                android:startColor="#34eba1"
+                android:endColor="#51C2BE" />
             <corners android:radius="40dp" />
         </shape>
     </item>
 
     <item
-        android:top="10dp"
-        android:bottom="10dp"
-        android:left="10dp"
-        android:right="10dp"
-        android:drawable="@drawable/ic_pause"/>
+        android:top="08dp"
+        android:bottom="08dp"
+        android:left="08dp"
+        android:right="08dp"
+        android:drawable="@drawable/ic_confirm"/>
 </layer-list>
+

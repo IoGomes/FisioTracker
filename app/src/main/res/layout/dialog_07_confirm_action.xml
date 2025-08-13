@@ -51,7 +51,7 @@
         android:layout_height="50dp"
         android:text="Individual"
         android:drawableEnd="@drawable/ic_session_only"
-        android:background="@drawable/button_gradient_confirm"
+        android:background="@drawable/button_bg_gradient_confirm"
         android:textAllCaps="false"
         android:paddingEnd="16dp"/>
 
