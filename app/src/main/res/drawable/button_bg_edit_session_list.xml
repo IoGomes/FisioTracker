@@ -13,5 +13,5 @@
         android:bottom="12dp"
         android:left="12dp"
         android:right="12dp"
-        android:drawable="@drawable/ic_pencil"/>
+        android:drawable="@drawable/ic_edit_session"/>
 </layer-list>
