@@ -42,7 +42,7 @@ public class Dialog_02_ConfirmAction {
         dialogView.findViewById(R.id.dismiss_button).setOnClickListener(v -> {dialog.dismiss();});
 
         dialogView.findViewById(R.id.addpaciente).setOnClickListener(v -> {
-            Dialog_05_Select_Pacient.showCustomDialog(context);
+            Dialog_06_Select_Pacient.showCustomDialog(context);
             dialog.dismiss();
         });
     }

@@ -15,7 +15,7 @@ import eightbitlab.com.blurview.BlurView;
 
 import FisioTracker.Android.R;
 
-public class Dialog_06_Session_Options {
+public class Dialog_05_Session_Options {
 
     public static void showDialog_03(Context context) {
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -46,7 +46,7 @@ public class Dialog_06_Session_Options {
         }
 
         dialogView.findViewById(R.id.addpaciente).setOnClickListener(v -> {
-            Dialog_05_Select_Pacient.showCustomDialog(context);
+            Dialog_06_Select_Pacient.showCustomDialog(context);
             dialog.dismiss();
         });
     }

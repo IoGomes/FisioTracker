@@ -14,7 +14,7 @@ import androidx.core.content.ContextCompat;
 import FisioTracker.Android.OrtoTracker_Activities.activity_02_dashboard;
 import FisioTracker.Android.R;
 
-public class Dialog_05_Select_Pacient {
+public class Dialog_06_Select_Pacient {
 
     private static final String[] nomes = {
             "João", "Maria", "Pedro", "Ana", "Lucas",
