@@ -42,7 +42,7 @@
         android:theme="@style/YourThemeName">
 
         <activity
-            android:name="FisioTracker.Android.OrtoTracker_Activities.activity_00_splash"
+            android:name="FisioTracker.Android.OrtoTracker_View.Activities.activity_00_splash"
             android:exported="true"
             android:noHistory="true"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
@@ -57,7 +57,7 @@
 
 
         <activity
-            android:name="FisioTracker.Android.OrtoTracker_Activities.activity_01_auth"
+            android:name="FisioTracker.Android.OrtoTracker_View.Activities.activity_01_auth"
             android:exported="false"
             android:hardwareAccelerated="true"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
@@ -69,23 +69,23 @@
 
         <activity
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
-            android:name="FisioTracker.Android.OrtoTracker_Activities.activity_02_dashboard"
+            android:name="FisioTracker.Android.OrtoTracker_View.Activities.activity_02_dashboard"
             android:exported="false"
             android:hardwareAccelerated="true"/>
 
         <activity
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
-            android:name="FisioTracker.Android.OrtoTracker_Activities.activity_03_profile"
+            android:name="FisioTracker.Android.OrtoTracker_View.Activities.activity_03_profile"
             android:exported="false" />
 
         <activity
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
-            android:name="FisioTracker.Android.OrtoTracker_Activities.activity_04_subscription"
+            android:name="FisioTracker.Android.OrtoTracker_View.Activities.activity_04_subscription"
             android:exported="false" />
 
         <activity
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
-            android:name="FisioTracker.Android.OrtoTracker_Activities.activity_05_data_export"
+            android:name="FisioTracker.Android.OrtoTracker_View.Activities.activity_05_data_export"
             android:exported="false" />
     </application>
 

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_dialog_background"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/dismiss_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end"
+        android:background="@drawable/ic_close"
+        android:contentDescription="Menu"
+        android:padding="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Formulario de Adição do Paciente:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAlignment="center">
+    </TextView>
+
+    <Space
+        android:layout_width="08dp"
+        android:layout_height="08dp" />
+
+    <EditText
+        android:id="@+id/addpaciente"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_edit_text_field"
+        android:drawableEnd="@drawable/ic_single_session"
+        android:hint="Nome do Paciente"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAllCaps="false" />
+
+    <Space
+        android:layout_width="08dp"
+        android:layout_height="08dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_edit_text_field"
+        android:drawableEnd="@drawable/ic_simultaneous_pacients"
+        android:hint="CPF"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAllCaps="false" />
+
+    <Space
+        android:layout_width="08dp"
+        android:layout_height="08dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_edit_text_field"
+        android:drawableEnd="@drawable/ic_simultaneous_pacients"
+        android:hint="Peso Inicial"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAllCaps="false" />
+
+    <Space
+        android:layout_width="08dp"
+        android:layout_height="08dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_edit_text_field"
+        android:drawableEnd="@drawable/ic_simultaneous_pacients"
+        android:hint="Patologia"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAllCaps="false" />
+
+    <Space
+        android:layout_width="08dp"
+        android:layout_height="08dp" />
+
+    <Button
+        android:id="@+id/conclude_add_pacient"
+        android:layout_gravity="end"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_bg_confirm" />
+
+</LinearLayout>

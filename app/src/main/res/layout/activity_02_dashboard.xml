@@ -14,42 +14,24 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="91dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="785dp"
-            android:layout_marginRight="10dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="18dp"
+            android:gravity="center">
 
-            <androidx.cardview.widget.CardView
+
+            <Button
+                android:id="@+id/start"
                 android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:clipChildren="true"
-                android:clipToOutline="true"
-                app:cardCornerRadius="28dp">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/shape_rounded_frame"
-                    android:clipChildren="true"
-                    android:clipToOutline="true"
-                    android:elevation="2dp">
-
-                    <Button
-                        android:id="@+id/start"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:fontFamily="@font/m_plus_rounded1c_regular"
-                        android:text="@string/start"
-                        android:textColor="@color/white"
-                        android:textSize="32sp"
-                        android:visibility="visible"
-                        android:textAllCaps="false"/>
-
-                </FrameLayout>
-
-            </androidx.cardview.widget.CardView>
+                android:layout_height="50dp"
+                android:background="@drawable/shape_edit_text_field"
+                android:fontFamily="@font/m_plus_rounded1c_regular"
+                android:text="@string/start"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:visibility="visible" />
 
             <Button
                 android:id="@+id/pause"
@@ -57,13 +39,10 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="10dp"
-                android:layout_marginBottom="12dp"
                 android:background="@drawable/button_bg_inactive_gradient"
                 android:clickable="true"
                 android:elevation="10dp"
                 android:focusable="true"
-                android:textSize="30sp"
-                android:textStyle="bold"
                 android:visibility="gone" />
 
             <Button
@@ -72,13 +51,11 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="10dp"
-                android:layout_marginBottom="12dp"
                 android:background="@drawable/button_bg_delete_session"
                 android:clickable="true"
                 android:elevation="10dp"
                 android:focusable="true"
                 android:textColor="@color/white"
-                android:textSize="30sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
 
@@ -113,7 +90,7 @@
 
             <eightbitlab.com.blurview.BlurView
                 android:layout_width="match_parent"
-                android:layout_height="678dp"
+                android:layout_height="681dp"
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/shape_rounded_corner_rectangle"
                 android:gravity="center"
@@ -121,7 +98,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     app:cardBackgroundColor="@android:color/transparent"
                     app:cardCornerRadius="22dp"
                     app:cardElevation="0dp"
@@ -131,8 +108,8 @@
                     <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:scrollbars="none"
-                        android:overScrollMode="never">
+                        android:overScrollMode="never"
+                        android:scrollbars="none">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -153,7 +130,7 @@
                                     android:layout_gravity="center_horizontal"
                                     android:layout_marginTop="8dp">
 
-                                    <FisioTracker.Android.OrtoTracker_Graphs.graph_01_speedometer
+                                    <FisioTracker.Android.OrtoTracker_View.Graphs.graph_01_speedometer
                                         android:id="@+id/speedView"
                                         android:layout_width="336sp"
                                         android:layout_height="match_parent"
@@ -174,26 +151,29 @@
                                         android:layout_gravity="center"
                                         android:orientation="vertical"
                                         android:paddingTop="20dp">
-                                    <ImageButton
-                                        android:id="@+id/huge_pacient"
-                                        android:layout_width="156dp"
-                                        android:layout_height="156dp"
-                                        android:layout_gravity="center"
-                                        android:elevation="8dp"
-                                        android:background="@drawable/ic_pacient"
-                                        android:src="@drawable/bg_pacient_outline"
-                                        app:tint="@color/gray" />
+
+                                        <ImageButton
+                                            android:id="@+id/huge_pacient"
+                                            android:layout_width="156dp"
+                                            android:layout_height="156dp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/ic_pacient"
+                                            android:elevation="8dp"
+                                            android:src="@drawable/bg_pacient_outline"
+                                            app:tint="@color/gray" />
 
                                         <Space
                                             android:layout_width="match_parent"
                                             android:layout_height="8dp" />
 
                                         <TextView
-                                            android:layout_width="wrap_content"
+                                            android:layout_width="100dp"
                                             android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/shape_edit_text_field"
                                             android:text="Luisa"
-                                            android:textColor="@color/white"
-                                            android:layout_gravity="center">
+                                            android:textAlignment="center"
+                                            android:textColor="@color/white">
 
                                         </TextView>
 
@@ -290,11 +270,12 @@
                                         android:gravity="center_horizontal"
                                         android:paddingTop="35dp">
 
-                                        <LinearLayout
+                                        <FrameLayout
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:gravity="center">
+                                            android:layout_height="55dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
                                             <ImageButton
                                                 android:id="@+id/button_pacient_1"
                                                 android:layout_width="50dp"
@@ -303,24 +284,39 @@
                                                 android:contentDescription="@string/pacient_1"
                                                 android:src="@drawable/bg_pacient_outline"
                                                 app:tint="@color/gray" />
+
+
                                             <TextView
-                                                android:layout_width="wrap_content"
+                                                android:layout_width="50dp"
                                                 android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
                                                 android:text="Luisa"
-                                                android:textColor="@color/white"
-                                                android:fontFamily="@font/m_plus_rounded_1c_thin">
-                                            </TextView>
-                                        </LinearLayout>
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white"></TextView>
+
+                                            <TextView
+                                                android:layout_width="50dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
+                                                android:text="Luisa"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white"></TextView>
+                                        </FrameLayout>
 
                                         <Space
                                             android:layout_width="16dp"
                                             android:layout_height="wrap_content" />
 
-                                        <LinearLayout
+                                        <FrameLayout
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:gravity="center">
+                                            android:layout_height="55dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
                                             <ImageButton
                                                 android:id="@+id/button_pacient_2"
                                                 android:layout_width="50dp"
@@ -329,24 +325,30 @@
                                                 android:contentDescription="@string/pacient_1"
                                                 android:src="@drawable/bg_pacient_outline"
                                                 app:tint="@color/gray" />
+
                                             <TextView
-                                                android:layout_width="wrap_content"
+                                                android:layout_width="50dp"
                                                 android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
                                                 android:text="Otavio"
-                                                android:textColor="@color/white"
-                                                android:fontFamily="@font/m_plus_rounded_1c_thin">
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white">
+
                                             </TextView>
-                                        </LinearLayout>
+                                        </FrameLayout>
 
                                         <Space
                                             android:layout_width="16dp"
                                             android:layout_height="wrap_content" />
 
-                                        <LinearLayout
+                                        <FrameLayout
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:gravity="center">
+                                            android:layout_height="55dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
                                             <ImageButton
                                                 android:id="@+id/button_pacient_3"
                                                 android:layout_width="50dp"
@@ -355,24 +357,28 @@
                                                 android:contentDescription="@string/pacient_1"
                                                 android:src="@drawable/bg_pacient_outline"
                                                 app:tint="@color/gray" />
+
                                             <TextView
-                                                android:layout_width="wrap_content"
+                                                android:layout_width="50dp"
                                                 android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
                                                 android:text="Pedro"
-                                                android:textColor="@color/white"
-                                                android:fontFamily="@font/m_plus_rounded_1c_thin">
-                                            </TextView>
-                                        </LinearLayout>
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white"></TextView>
+                                        </FrameLayout>
 
                                         <Space
                                             android:layout_width="16dp"
                                             android:layout_height="wrap_content" />
 
-                                        <LinearLayout
+                                        <FrameLayout
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:gravity="center">
+                                            android:layout_height="55dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
                                             <ImageButton
                                                 android:id="@+id/button_pacient_4"
                                                 android:layout_width="50dp"
@@ -381,24 +387,31 @@
                                                 android:contentDescription="@string/pacient_1"
                                                 android:src="@drawable/bg_pacient_outline"
                                                 app:tint="@color/gray" />
+
                                             <TextView
-                                                android:layout_width="wrap_content"
+                                                android:layout_width="50dp"
                                                 android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:layout_marginTop="10dp"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
                                                 android:text="Lucas"
-                                                android:textColor="@color/white"
-                                                android:fontFamily="@font/m_plus_rounded_1c_thin">
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white">
+
                                             </TextView>
-                                        </LinearLayout>
+                                        </FrameLayout>
 
                                         <Space
                                             android:layout_width="16dp"
                                             android:layout_height="wrap_content" />
 
-                                        <LinearLayout
+                                        <FrameLayout
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:gravity="center">
+                                            android:layout_height="55dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
                                             <ImageButton
                                                 android:id="@+id/button_pacient_5"
                                                 android:layout_width="50dp"
@@ -407,14 +420,17 @@
                                                 android:contentDescription="@string/pacient_1"
                                                 android:src="@drawable/bg_pacient_outline"
                                                 app:tint="@color/gray" />
+
                                             <TextView
-                                                android:layout_width="wrap_content"
+                                                android:layout_width="50dp"
                                                 android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
                                                 android:text="Kiria"
-                                                android:textColor="@color/white"
-                                                android:fontFamily="@font/m_plus_rounded_1c_thin">
-                                            </TextView>
-                                        </LinearLayout>
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white"></TextView>
+                                        </FrameLayout>
 
 
                                     </LinearLayout>
@@ -424,11 +440,12 @@
                                         android:layout_height="wrap_content"
                                         android:gravity="center_horizontal">
 
-                                        <LinearLayout
+                                        <FrameLayout
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:gravity="center">
+                                            android:layout_height="55dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
                                             <ImageButton
                                                 android:id="@+id/button_pacient_6"
                                                 android:layout_width="50dp"
@@ -437,24 +454,30 @@
                                                 android:contentDescription="@string/pacient_1"
                                                 android:src="@drawable/bg_pacient_outline"
                                                 app:tint="@color/gray" />
+
                                             <TextView
-                                                android:layout_width="wrap_content"
+                                                android:layout_width="50dp"
                                                 android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
                                                 android:text="Manoel"
-                                                android:textColor="@color/white"
-                                                android:fontFamily="@font/m_plus_rounded_1c_thin">
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white">
+
                                             </TextView>
-                                        </LinearLayout>
+                                        </FrameLayout>
 
                                         <Space
                                             android:layout_width="16dp"
                                             android:layout_height="wrap_content" />
 
-                                        <LinearLayout
+                                        <FrameLayout
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:gravity="center">
+                                            android:layout_height="55dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
                                             <ImageButton
                                                 android:id="@+id/button_pacient_7"
                                                 android:layout_width="50dp"
@@ -463,24 +486,28 @@
                                                 android:contentDescription="@string/pacient_1"
                                                 android:src="@drawable/bg_pacient_outline"
                                                 app:tint="@color/gray" />
+
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
                                                 android:text="Gabriela"
-                                                android:textColor="@color/white"
-                                                android:fontFamily="@font/m_plus_rounded_1c_thin">
-                                            </TextView>
-                                        </LinearLayout>
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white"></TextView>
+                                        </FrameLayout>
 
                                         <Space
                                             android:layout_width="16dp"
                                             android:layout_height="wrap_content" />
 
-                                        <LinearLayout
+                                        <FrameLayout
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:gravity="center">
+                                            android:layout_height="55dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
                                             <ImageButton
                                                 android:id="@+id/button_pacient_8"
                                                 android:layout_width="50dp"
@@ -489,24 +516,30 @@
                                                 android:contentDescription="@string/pacient_1"
                                                 android:src="@drawable/bg_pacient_outline"
                                                 app:tint="@color/gray" />
+
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
                                                 android:text="Eduardo"
-                                                android:textColor="@color/white"
-                                                android:fontFamily="@font/m_plus_rounded_1c_thin">
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white">
+
                                             </TextView>
-                                        </LinearLayout>
+                                        </FrameLayout>
 
                                         <Space
                                             android:layout_width="16dp"
                                             android:layout_height="wrap_content" />
 
-                                        <LinearLayout
+                                        <FrameLayout
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:gravity="center">
+                                            android:layout_height="55dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
                                             <ImageButton
                                                 android:id="@+id/button_pacient_9"
                                                 android:layout_width="50dp"
@@ -515,24 +548,28 @@
                                                 android:contentDescription="@string/pacient_1"
                                                 android:src="@drawable/bg_pacient_outline"
                                                 app:tint="@color/gray" />
+
                                             <TextView
-                                                android:layout_width="wrap_content"
+                                                android:layout_width="50dp"
                                                 android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
                                                 android:text="Luiz"
-                                                android:textColor="@color/white"
-                                                android:fontFamily="@font/m_plus_rounded_1c_thin">
-                                            </TextView>
-                                        </LinearLayout>
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white"></TextView>
+                                        </FrameLayout>
 
                                         <Space
                                             android:layout_width="16dp"
                                             android:layout_height="wrap_content" />
 
-                                        <LinearLayout
+                                        <FrameLayout
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:gravity="center">
+                                            android:layout_height="55dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
                                             <ImageButton
                                                 android:id="@+id/button_pacient_10"
                                                 android:layout_width="50dp"
@@ -541,14 +578,19 @@
                                                 android:contentDescription="@string/pacient_1"
                                                 android:src="@drawable/bg_pacient_outline"
                                                 app:tint="@color/gray" />
+
                                             <TextView
-                                                android:layout_width="wrap_content"
+                                                android:layout_width="50dp"
                                                 android:layout_height="wrap_content"
+                                                android:layout_gravity="center|bottom"
+                                                android:background="@drawable/shape_edit_text_field"
+                                                android:fontFamily="@font/m_plus_rounded_1c_thin"
                                                 android:text="Livia"
-                                                android:textColor="@color/white"
-                                                android:fontFamily="@font/m_plus_rounded_1c_thin">
+                                                android:textAlignment="center"
+                                                android:textColor="@color/white">
+
                                             </TextView>
-                                        </LinearLayout>
+                                        </FrameLayout>
 
                                     </LinearLayout>
 
@@ -581,10 +623,10 @@
                                 android:layout_height="232dp"
                                 android:background="@drawable/bg_container_gradient"
                                 android:clipToOutline="true"
-                                android:orientation="vertical"
-                                android:labelFor="@+id/id">
+                                android:labelFor="@+id/id"
+                                android:orientation="vertical">
 
-                                <FisioTracker.Android.OrtoTracker_Graphs.graph_02_dispersal
+                                <FisioTracker.Android.OrtoTracker_View.Graphs.graph_02_dispersal
                                     android:id="@+id/chartView"
                                     android:layout_width="match_parent"
                                     android:layout_height="232dp"
@@ -632,6 +674,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@android:color/transparent"
+        android:elevation="20dp"
         amdroid:fitsSystemWindows="true">
 
         <com.google.android.material.navigation.NavigationView

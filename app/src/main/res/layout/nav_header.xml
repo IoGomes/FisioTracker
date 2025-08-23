@@ -36,7 +36,8 @@
             android:paddingBottom="30dp"
             android:text="Ítalo Oliveira Gomes"
             android:textColor="@color/white"
-            android:textSize="12dp"></TextView>
+            android:textSize="12dp">
+        </TextView>
 
     </eightbitlab.com.blurview.BlurView>
 

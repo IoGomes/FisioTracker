@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_dialog_background"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/dismiss_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end"
+        android:contentDescription="Menu"
+        android:background="@drawable/ic_close"
+        android:padding="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deseja cancelar a sessão?"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_gravity="center">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:text="@string/esta_a_o_ir_deletar_todos_os_dados_permanentemente_n_o_ser_poss_vel_recuperar_as_informa_es_ap_s_a_exclus_o_deseja_continuar"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:padding="10dp">
+    </TextView>
+
+    <ImageView
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_auth_screen_separate_line"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_dialog_background"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:paddingEnd="10dp"
+        android:gravity="end">
+
+    <Space
+        android:layout_width="08dp"
+        android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/cancel_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Simultanea"
+            android:paddingEnd="16dp"
+            android:drawableEnd="@drawable/ic_simultaneous_pacients"
+            android:background="@drawable/button_bg_not_confirm"
+            android:textAllCaps="false"/>
+
+    <Space
+        android:layout_width="12dp"
+        android:layout_height="08dp" />
+
+        <ImageButton
+            android:id="@+id/addpaciente"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Individual"
+            android:drawableEnd="@drawable/ic_single_session"
+            android:background="@drawable/button_bg_confirm"
+            android:textAllCaps="false"
+            android:paddingEnd="16dp"/>
+
+    </LinearLayout>
+</LinearLayout>

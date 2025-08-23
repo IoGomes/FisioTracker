@@ -8,7 +8,15 @@
     <color name="black">#101010</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#606060</color>
-    <color name="DarkPastelgreen">#4CAF50</color>
-    <color name="Azure">#03A9F4</color>
-    <color name="Topaz">#00BCD4</color>
+
+    <color name="pacient1">#F44336</color>
+    <color name="pacient2">#9C27B0</color>
+    <color name="pacient3">#3F51B5</color>
+    <color name="pacient4">#03A9F4</color>
+    <color name="pacient5">#00897B</color>
+    <color name="pacient6">#8BC34A</color>
+    <color name="pacient7">#FFEB3B</color>
+    <color name="pacient8">#FF9800</color>
+    <color name="pacient9">#8D6E63</color>
+    <color name="pacient10">#607D8B</color>
 </resources>
