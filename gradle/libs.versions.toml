@@ -1,6 +1,7 @@
 [versions]
 agp = "8.11.1"
 blurview = "version-2.0.6"
+converterGson = "2.9.0"
 coreSplashscreen = "1.0.1"
 credentials = "<latest version>"
 credentialsPlayServicesAuth = "1.2.2"
@@ -16,12 +17,16 @@ leakcanaryAndroid = "2.14"
 lottie = "6.1.0"
 material = "1.12.0"
 playServicesAuth = "20.7.0"
+retrofit = "3.1.0-SNAPSHOT"
+retrofitVersion = "2.9.0"
 speedviewlib = "1.6.1"
 firebaseDatabase = "22.0.0"
 firebaseFirestore = "26.0.0"
+recyclerview = "1.4.0"
 
 [libraries]
 blurview = { module = "com.github.Dimezis:BlurView", version.ref = "blurview" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 credentials = { module = "androidx.credentials:credentials", version.ref = "credentials" }
 credentials-play-services-auth = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentials" }
@@ -39,9 +44,12 @@ leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", ve
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-v290 = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
 speedviewlib = { module = "com.github.anastr:speedviewlib", version.ref = "speedviewlib" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

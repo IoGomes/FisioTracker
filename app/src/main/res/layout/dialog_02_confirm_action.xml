@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="300dp"
     android:layout_height="wrap_content"
     android:background="@drawable/list_dialog_background"
@@ -11,76 +12,101 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="end"
-        android:contentDescription="Menu"
         android:background="@drawable/ic_close"
+        android:contentDescription="Menu"
         android:padding="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:text="Deseja cancelar a sessão?"
         android:textColor="@color/white"
-        android:gravity="center"
-        android:textStyle="bold"
         android:textSize="20dp"
-        android:layout_gravity="center">
+        android:textStyle="bold">
+
     </TextView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:justificationMode="inter_word"
-        android:text="@string/esta_a_o_ir_deletar_todos_os_dados_permanentemente_n_o_ser_poss_vel_recuperar_as_informa_es_ap_s_a_exclus_o_deseja_continuar"
-        android:textColor="@color/white"
         android:layout_gravity="center"
-        android:padding="10dp">
+        android:justificationMode="inter_word"
+        android:padding="10dp"
+        android:text="@string/esta_a_o_ir_deletar_todos_os_dados_permanentemente_n_o_ser_poss_vel_recuperar_as_informa_es_ap_s_a_exclus_o_deseja_continuar"
+        android:textColor="@color/white">
+
     </TextView>
 
     <ImageView
         android:layout_width="282dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_auth_screen_separate_line"
         android:layout_gravity="center"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_auth_screen_separate_line">
 
     </ImageView>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/raw_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:lottie_rawRes="@raw/lottie_02_loading_circle">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <ListView
+        android:id="@+id/user_listview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/list_dialog_background"
+        android:gravity="end"
         android:orientation="horizontal"
         android:padding="4dp"
-        android:paddingEnd="10dp"
-        android:gravity="end">
+        android:paddingEnd="10dp">
 
-    <Space
-        android:layout_width="08dp"
-        android:layout_height="wrap_content" />
+        <Space
+            android:layout_width="08dp"
+            android:layout_height="wrap_content" />
 
         <ImageButton
             android:id="@+id/cancel_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="Simultanea"
-            android:paddingEnd="16dp"
-            android:drawableEnd="@drawable/ic_simultaneous_pacients"
             android:background="@drawable/button_bg_not_confirm"
-            android:textAllCaps="false"/>
+            android:drawableEnd="@drawable/ic_simultaneous_pacients"
+            android:paddingEnd="16dp"
+            android:text="Simultanea"
+            android:textAllCaps="false" />
 
-    <Space
-        android:layout_width="12dp"
-        android:layout_height="08dp" />
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="08dp" />
 
         <ImageButton
             android:id="@+id/addpaciente"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="Individual"
-            android:drawableEnd="@drawable/ic_single_session"
             android:background="@drawable/button_bg_confirm"
-            android:textAllCaps="false"
-            android:paddingEnd="16dp"/>
+            android:drawableEnd="@drawable/ic_single_session"
+            android:paddingEnd="16dp"
+            android:text="Individual"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 </LinearLayout>

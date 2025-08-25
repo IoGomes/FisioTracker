@@ -22,7 +22,7 @@ import com.airbnb.lottie.LottieAnimationView;
 
 import FisioTracker.Android.OrtoTracker_Model.Services.service_06_dateTimeInfo;
 import FisioTracker.Android.OrtoTracker_View.Activities.activity_02_dashboard;
-import FisioTracker.Android.OrtoTracker_Model.Entitys.Entity_01_Account;
+import FisioTracker.Android.OrtoTracker_Model.Entitys.Entity_01_Account_subutilized;
 import FisioTracker.Android.OrtoTracker_View.Dialogs.Dialog_02_Login_Credentials;
 import FisioTracker.Android.R;
 
@@ -30,7 +30,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.type.DateTime;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,7 +47,7 @@ public class fragment_01_login extends Fragment {
     private EditText passwordTextField;
     private TextView textView2;
 
-    Entity_01_Account account = new Entity_01_Account();
+    Entity_01_Account_subutilized account = new Entity_01_Account_subutilized();
 
     service_06_dateTimeInfo dateTimeInfo = new service_06_dateTimeInfo();
 

@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import FisioTracker.Android.OrtoTracker_View.Activities.activity_02_dashboard;
-import FisioTracker.Android.OrtoTracker_Model.Entitys.Entity_01_Account;
+import FisioTracker.Android.OrtoTracker_Model.Entitys.Entity_01_Account_subutilized;
 import FisioTracker.Android.OrtoTracker_View.Dialogs.Dialog_02_Login_Credentials;
 import FisioTracker.Android.R;
 
@@ -62,7 +62,7 @@ public class fragment_02_register extends Fragment {
                 .setFrameClearDrawable(requireActivity().getWindow().getDecorView().getBackground())
                 .setBlurRadius(24f);
 
-        Entity_01_Account account = new Entity_01_Account();
+        Entity_01_Account_subutilized account = new Entity_01_Account_subutilized();
 
         signupButton.setOnClickListener(v -> {
 

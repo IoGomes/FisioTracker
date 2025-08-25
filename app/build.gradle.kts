@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.firebase.database)
     implementation(libs.firebase.firestore)
+    implementation(libs.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -57,5 +58,8 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.play.services.auth)
     debugImplementation(libs.leakcanary.android)
+    implementation(libs.retrofit.v290)
+    implementation(libs.converter.gson)
+
 }
 

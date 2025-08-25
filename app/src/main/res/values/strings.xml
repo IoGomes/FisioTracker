@@ -28,5 +28,7 @@
     <string name="pacient_2">pacient_2</string>
     <string name="linha_que_conecta">linha que conecta</string>
     <string name="confirmar">Confirmar</string>
+    <string name="NameVerification">Campo de Nome não pode ser vazio</string>
+
     <string name="esta_a_o_ir_deletar_todos_os_dados_permanentemente_n_o_ser_poss_vel_recuperar_as_informa_es_ap_s_a_exclus_o_deseja_continuar">Esta ação irá deletar todos os dados da sessão permanentemente. Não será possível recuperar as informações após a exclusão. Deseja continuar?</string>
 </resources>
